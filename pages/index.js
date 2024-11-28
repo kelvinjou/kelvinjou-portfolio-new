@@ -17,6 +17,7 @@ import { useTheme } from "next-themes";
 // Local Data
 import data from "../data/portfolio.json";
 import { language } from "gray-matter";
+import GithubCard from "../components/GithubCard";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -184,13 +185,8 @@ export default function Home() {
             </Link>
           </div>
         )}
-
-      <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-        <div className={`flex justify-center ${theme === "dark" ? "opacity-60" : "opacity-100"}`}>
-          <img src="http://ghchart.rshah.org/7734b7/kelvinjou" alt="2016rshah's Github chart" />
-        </div>
-      </div>
-
+        
+        <GithubCard />
         <Footer />
       </div>
     </div>

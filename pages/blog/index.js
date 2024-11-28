@@ -65,7 +65,7 @@ const Blog = ({ posts }) => {
       <>
         {data.showCursor && <Cursor />}
         <Head>
-          <title>Blog</title>
+          <title>Projects</title>
         </Head>
         <div
           className={`container mx-auto mb-10 ${
@@ -78,7 +78,7 @@ const Blog = ({ posts }) => {
               ref={text}
               className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-full"
             >
-              Blog.
+              Projects.
             </h1>
             <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
               {posts &&
