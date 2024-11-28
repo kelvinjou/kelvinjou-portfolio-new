@@ -1,9 +1,9 @@
 {
-    "name": "Chetan",
-    "headerTaglineOne": "Hello 👋",
-    "headerTaglineTwo": "I'm Chetan Verma - curious",
-    "headerTaglineThree": "designer and developer",
-    "headerTaglineFour": "based in New Delhi, India.",
+    "name": "Kelvin",
+    "headerTaglineOne": "Hiii 👋",
+    "headerTaglineTwo": "I'm Kelvin Jou –",
+    "headerTaglineThree": "student based in",
+    "headerTaglineFour": "Bay Area & Goleta, CA",
     "showCursor": true,
     "showBlog": true,
     "darkMode": true,
@@ -12,26 +12,29 @@
         {
             "id": "1",
             "title": "Github",
+            "icon-dark": "/images/socials/dark/logo-github.svg",
+            "icon-light": "/images/socials/light/logo-github.svg",
             "link": "https://github.com/chetanverma16"
         },
         {
             "id": "2",
             "title": "LinkedIn",
+            "icon-dark": "/images/socials/dark/logo-linkedin.svg",
+            "icon-light": "/images/socials/light/logo-linkedin.svg",
             "link": "https://www.linkedin.com/in/chetanverma7/"
         },
         {
             "id": "3",
-            "title": "Twitter",
+            "title": "YouTube",
+            "icon-dark": "/images/socials/dark/logo-youtube.svg",
+            "icon-light": "/images/socials/light/logo-youtube.svg",
             "link": "https://twitter.com/realchetanverma"
         },
         {
             "id": "4",
-            "title": "Blog",
-            "link": "https://blog.chetanverma.com/"
-        },
-        {
-            "id": "5",
             "title": "Email",
+            "icon-dark": "/images/socials/dark/mail.svg",
+            "icon-light": "/images/socials/light/mail.svg",
             "link": "mailto:hello@chetanverma.com"
         }
     ],
@@ -79,26 +82,19 @@
             "url": "http://chetanverma.com/"
         }
     ],
-    "services": [
+    "updates": [
         {
             "id": "1",
-            "title": "Art Direction",
-            "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
+            "title": "ExpressFlip released",
+            "description": "Recently released my second iOS app, intended to help musicians flip music sheet music using facial queues",
+            "date": "09/02/2024"
         },
         {
             "id": "2",
-            "title": "Branding",
-            "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
-        },
-        {
-            "id": "3",
-            "title": "Web Design",
-            "description": "We build and optimize your online presence. Website is the digital entry point into your business and a powerful revenue channel."
-        },
-        {
-            "id": "4",
-            "title": "3D Design",
-            "description": "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."
+            "title": "HAL Lab",
+            "description": "Will be collaborating at UCSB HAL lab for a new joint research project for the months to come",
+            "date": "11/24/2024"
+
         }
     ],
     "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -141,5 +137,55 @@
             "AWS",
             "Firebase"
         ]
-    }
+    },
+    "languages": [
+        {
+            "name": "C++",
+            "logo": "/images/languages/c++.png"
+        },
+        {
+            "name": "Swift",
+            "logo": "/images/languages/swift.png"
+        },
+        {
+            "name": "Python",
+            "logo": "/images/languages/python.png"
+        },
+        {
+            "name": "Java",
+            "logo": "/images/languages/java.png"
+        },
+        {
+            "name": "Flutter",
+            "logo": "/images/languages/flutter.png"
+        },
+        {
+            "name": "Javascript",
+            "logo": "/images/languages/js.png"
+        }
+
+    ],
+    "data_storage": [
+        {
+            "name": "Firebase",
+            "logo": "/images/data_storage/firebase.png"
+        },
+        {
+            "name": "Realm",
+            "logo": "/images/data_storage/realm.png"
+        },
+        {
+            "name": "AWS S3",
+            "logo": "/images/data_storage/aws_s3.png"
+        },
+        {
+            "name": "AWS DynamoDB",
+            "logo": "/images/data_storage/dynamodb.png"
+        },
+        {
+            "name": "PostgreSQL",
+            "logo": "/images/data_storage/postgreSQL.png"
+        }
+
+    ]
 }

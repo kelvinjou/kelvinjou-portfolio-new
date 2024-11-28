@@ -86,6 +86,7 @@ const Blog = ({ posts }) => {
                   <div
                     className="cursor-pointer relative"
                     key={post.slug}
+                    //aha
                     onClick={() => Router.push(`/blog/${post.slug}`)}
                   >
                     <img
