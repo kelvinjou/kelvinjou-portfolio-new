@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  
   "dependencies": {
     "@headlessui/react": "^1.6.6",
     "autoprefixer": "^10.4.7",
