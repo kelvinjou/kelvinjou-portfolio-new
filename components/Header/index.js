@@ -72,7 +72,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   <Button onClick={handleWorkScroll}>Work</Button>
                   <Button onClick={handleAboutScroll}>About</Button>
                   {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Projects</Button>
+                    <Button onClick={() => router.push("/project")}>Projects</Button>
                   )}
                   {showResume && (
                     <Button
@@ -119,8 +119,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         )}
       </Popover>
       <div
-        className={`mt-10 hidden flex-row items-center justify-between sticky ${
-          theme === "light" && "bg-white"
+        className={`mt-5 hidden flex-row items-center justify-between sticky px-4 rounded-2xl ${
+          theme === "light" ? "bg-white" : "bg-slate-800 bg-opacity-70"
         } dark:text-white top-0 z-10 tablet:flex`}
       >
         <h1
@@ -134,7 +134,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             <Button onClick={handleWorkScroll}>Work</Button>
             <Button onClick={handleAboutScroll}>About</Button>
             {showBlog && (
-              <Button onClick={() => router.push("/blog")}>Projects</Button>
+              <Button onClick={() => router.push("/project")}>Projects</Button>
             )}
             {showResume && (
               <Button
@@ -163,7 +163,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           <div className="flex">
             <Button onClick={() => router.push("/")}>Home</Button>
             {showBlog && (
-              <Button onClick={() => router.push("/blog")}>Projects</Button>
+              <Button onClick={() => router.push("/project")}>Projects</Button>
             )}
             {showResume && (
               <Button
