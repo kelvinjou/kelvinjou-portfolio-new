@@ -122,8 +122,18 @@ const Blog = ({ posts }) => {
                 ))} */}
                 {data.projects.slice().reverse().map((project) => (
                   <div className="justify-center cursor-pointer relative"
-                  key={project.slug}
-                  onClick={() => Router.push(`/project/${project.slug}`)}
+                  key={project.id}
+                  onClick={() => Router.push({
+                    pathname: `/project/${project.id}`,
+                    query: {
+                      title: project.title,
+                      description: project.description,
+                      imgageSrc: project.imageSrc,
+                      url: project.url,
+                      techStack: project.techstack
+                    }
+                  })
+                }
                   >
                   {/* flex and justify-end here makes sure the image is anchored to bottom */}
                   <div className={`flex flex-col items-start justify-end h-full mob:p-4 rounded-lg transition-all ease-out duration-300 ${
@@ -148,33 +158,33 @@ const Blog = ({ posts }) => {
             </div>
           </div>
         </div>
-        {process.env.NODE_ENV === "development" && mounted && (
+        {/* {process.env.NODE_ENV === "development" && mounted && (
           <div className="fixed bottom-6 right-6">
             <Button onClick={createBlog} type={"primary"}>
               Add New Post +{" "}
             </Button>
           </div>
-        )}
+        )} */}
       </>
     )
   );
 };
 
-export async function getStaticProps() {
-  const posts = getAllPosts([
-    "slug",
-    "title",
-    "image",
-    "preview",
-    "author",
-    "date",
-  ]);
+// export async function getStaticProps() {
+//   const posts = getAllPosts([
+//     "slug",
+//     "title",
+//     "image",
+//     "preview",
+//     "author",
+//     "date",
+//   ]);
 
-  return {
-    props: {
-      posts: [...posts],
-    },
-  };
-}
+//   return {
+//     props: {
+//       posts: [...posts],
+//     },
+//   };
+// }
 
 export default Blog;

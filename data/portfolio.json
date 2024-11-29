@@ -46,7 +46,10 @@
             "imageSrc": "/images/projects/creditcheck.png",
             "width": 650,
             "height": 450,
-            "url": "http://chetanverma.com/"
+            "url": "",
+            "techstack": [
+                {"AR Kit" : ""}
+            ]
         },
         {
             "id": "2",
@@ -55,7 +58,10 @@
             "imageSrc": "/images/projects/transizion.png",
             "width": 950,
             "height": 650,
-            "url": "http://chetanverma.com/"
+            "url": "https://projectcapstone.com",
+            "techstack": [
+
+            ]
         },
         {
             "id": "3",
@@ -64,7 +70,10 @@
             "imageSrc": "/images/projects/serv-host-portal.png",
             "width": 950,
             "height": 650,
-            "url": "http://chetanverma.com/"
+            "url": "http://host.goserv.org",
+            "techstack": [
+
+            ]
         },
         {
             "id": "4",
@@ -73,7 +82,10 @@
             "imageSrc": "/images/projects/serv.png",
             "width": 446,
             "height": 300,
-            "url": "http://chetanverma.com/"
+            "url": "https://apps.apple.com/us/app/go-serv/id1643955466",
+            "techstack": [
+
+            ]
         },
         {
             "id": "5",
@@ -82,7 +94,10 @@
             "imageSrc": "/images/projects/tunotes.png",
             "width": 800,
             "height": 475,
-            "url": "http://chetanverma.com/"
+            "url": "https://github.com/kelvinjou/Tunotes",
+            "techstack": [
+
+            ]
         },
         {
             "id": "6",
@@ -91,7 +106,10 @@
             "imageSrc": "/images/projects/codeFormerUI.png",
             "width": 950,
             "height": 650,
-            "url": "http://chetanverma.com/"
+            "url": "https://github.com/kelvinjou/CodeFormerUI",
+            "techstack": [
+
+            ]
         },
         {
             "id": "6",
@@ -100,16 +118,22 @@
             "imageSrc": "/images/projects/virtualshowrooms.png",
             "width": 800,
             "height": 650,
-            "url": "http://chetanverma.com/"
+            "url": "http://chetanverma.com/",
+            "techstack": [
+
+            ]
         },
         {
             "id": "7",
             "title": "ExpressFlip",
-            "description": "PDF heet music pagination with facial expressions",
+            "description": "PDF sheet music pagination with facial expressions",
             "imageSrc": "/images/projects/expressflip.png",
             "width": 350,
             "height": 350,
-            "url": "http://chetanverma.com/"
+            "url": "https://apps.apple.com/us/app/expressflip/id6642683123",
+            "techstack": [
+
+            ]
         }
     ],
     "updates": [

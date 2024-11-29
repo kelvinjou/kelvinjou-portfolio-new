@@ -119,7 +119,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         )}
       </Popover>
       <div
-        className={`mt-5 hidden flex-row items-center justify-between sticky px-4 rounded-2xl ${
+        className={`mt-5 hidden flex-row items-center justify-between sticky px-4 py-2 rounded-2xl ${
           theme === "light" ? "bg-white" : "bg-slate-800 bg-opacity-70"
         } dark:text-white top-0 z-10 tablet:flex`}
       >
