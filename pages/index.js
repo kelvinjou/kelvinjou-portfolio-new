@@ -130,7 +130,7 @@ export default function Home() {
         <div className="laptop:mt-40 p-2 laptop:p-0" ref={workRef}>
           <h1 className="tablet:m-10 text-2xl text-bold">Languages.</h1>
           {/* flex wrap allows images to wrap onto a new row if no more space */}
-          <div className="flex flex-wrap justify-center overflow-x-auto scrollbar-hide space-x-16 px-4">
+          <div className="flex flex-wrap justify-center scrollbar-hide space-x-16 px-4">
             {data.languages.map((language) => (
               <div className="flex-shrink-0 columns-1 text-center">
                 <Image
@@ -149,7 +149,7 @@ export default function Home() {
         <div className="laptop:mt-40 p-2 laptop:p-0">
           <h1 className="tablet:m-10 text-2xl text-bold">Storage Management.</h1>
           {/* flex wrap allows images to wrap onto a new row if no more space */}
-          <div className="flex flex-wrap justify-center overflow-x-auto scrollbar-hide space-x-16 px-4">
+          <div className="flex flex-wrap justify-center scrollbar-hide space-x-16 px-4">
             {data.data_storage.map((storage) => (
               <div className="flex-shrink-0 columns-1 text-center">
                 <Image
