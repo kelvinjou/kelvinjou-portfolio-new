@@ -14,57 +14,64 @@
             "title": "Github",
             "icon-dark": "/images/socials/dark/logo-github.svg",
             "icon-light": "/images/socials/light/logo-github.svg",
-            "link": "https://github.com/chetanverma16"
+            "link": "https://github.com/kelvinjou"
         },
         {
             "id": "2",
             "title": "LinkedIn",
             "icon-dark": "/images/socials/dark/logo-linkedin.svg",
             "icon-light": "/images/socials/light/logo-linkedin.svg",
-            "link": "https://www.linkedin.com/in/chetanverma7/"
+            "link": "https://www.linkedin.com/in/kelvinjou/"
         },
         {
             "id": "3",
             "title": "YouTube",
             "icon-dark": "/images/socials/dark/logo-youtube.svg",
             "icon-light": "/images/socials/light/logo-youtube.svg",
-            "link": "https://twitter.com/realchetanverma"
+            "link": "https://www.youtube.com/@kelvinjou-dev"
         },
         {
             "id": "4",
             "title": "Email",
             "icon-dark": "/images/socials/dark/mail.svg",
             "icon-light": "/images/socials/light/mail.svg",
-            "link": "mailto:hello@chetanverma.com"
+            "link": "mailto:kelvinj.developer@gmail.com"
         }
     ],
     "projects": [
         {
-            "id": "1",
             "title": "CreditCheck",
             "description": "Help users optimize credit card rewards by recommending the best card to use for maximizing them",
             "imageSrc": "/images/projects/creditcheck.png",
             "width": 650,
             "height": 450,
-            "url": "",
+            "url": "https://github.com/kelvinjou/Rewards",
             "techstack": [
-                {"AR Kit" : ""}
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                },        
+                {
+                    "name": "Realm",
+                    "logo": "/images/data_storage/realm.png"
+                }
             ]
         },
         {
-            "id": "2",
             "title": "Transizion Project Capstone",
-            "description": "Product developed for Transizion",
+            "description": "Educational web application developed for Transizion",
             "imageSrc": "/images/projects/transizion.png",
             "width": 950,
             "height": 650,
             "url": "https://projectcapstone.com",
             "techstack": [
-
+                {
+                    "name": "Flutter",
+                    "logo": "/images/languages/flutter.png"
+                }
             ]
         },
         {
-            "id": "3",
             "title": "Serv Host Portal",
             "description": "Web portal for organizations to manage their events postings",
             "imageSrc": "/images/projects/serv-host-portal.png",
@@ -72,11 +79,17 @@
             "height": 650,
             "url": "http://host.goserv.org",
             "techstack": [
-
+                {
+                    "name": "Flutter",
+                    "logo": "/images/languages/flutter.png"
+                },
+                {
+                    "name": "Firebase",
+                    "logo": "/images/data_storage/firebase.png"
+                }
             ]
         },
         {
-            "id": "4",
             "title": "Serv",
             "description": "Platform that helps high school students find service opportunities in their community",
             "imageSrc": "/images/projects/serv.png",
@@ -84,11 +97,25 @@
             "height": 300,
             "url": "https://apps.apple.com/us/app/go-serv/id1643955466",
             "techstack": [
-
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                },
+                {
+                    "name": "Firebase",
+                    "logo": "/images/data_storage/firebase.png"
+                },
+                {
+                    "name": "Core Data",
+                    "logo": "/images/misc_techstack/core_data.png"
+                },
+                {
+                    "name": "Mapkit",
+                    "logo": "/images/misc_techstack/mapkit.png"
+                }
             ]
         },
         {
-            "id": "5",
             "title": "Tunotes",
             "description": "Generate music notations based on specific instrumental parts of any MIDI files",
             "imageSrc": "/images/projects/tunotes.png",
@@ -96,11 +123,13 @@
             "height": 475,
             "url": "https://github.com/kelvinjou/Tunotes",
             "techstack": [
-
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                }
             ]
         },
         {
-            "id": "6",
             "title": "CodeFormerUI",
             "description": "UI built for CodeFormer blind face restoration transformer (NeurIPS2022)",
             "imageSrc": "/images/projects/codeFormerUI.png",
@@ -108,23 +137,44 @@
             "height": 650,
             "url": "https://github.com/kelvinjou/CodeFormerUI",
             "techstack": [
-
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                },
+                {
+                    "name": "Pythonkit",
+                    "logo": "/images/misc_techstack/placeholder.png"
+                }
             ]
         },
         {
-            "id": "6",
             "title": "Virtual Showrooms",
             "description": "Create on-demand AR object files based on surrounding Li-DAR scan",
             "imageSrc": "/images/projects/virtualshowrooms.png",
             "width": 800,
             "height": 650,
-            "url": "http://chetanverma.com/",
+            "url": "https://github.com/kelvinjou/VirtualShowrooms",
             "techstack": [
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                },
+                {
+                    "name": "ARKit",
+                    "logo": "/images/misc_techstack/arkit.png"
+                },
+                {
+                    "name": "RealityKit",
+                    "logo": "/images/misc_techstack/realitykit.png"
+                },
+                {
+                    "name": "MetalKit",
+                    "logo": "/images/misc_techstack/metalkit.png"
+                }
 
             ]
         },
         {
-            "id": "7",
             "title": "ExpressFlip",
             "description": "PDF sheet music pagination with facial expressions",
             "imageSrc": "/images/projects/expressflip.png",
@@ -132,7 +182,14 @@
             "height": 350,
             "url": "https://apps.apple.com/us/app/expressflip/id6642683123",
             "techstack": [
-
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                },
+                {
+                    "name": "ARKit",
+                    "logo": "/images/misc_techstack/arkit.png"
+                }
             ]
         }
     ],
@@ -151,7 +208,7 @@
 
         }
     ],
-    "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "aboutpara": "I'm a first-year student studying computer engineering at University of California, Santa Barbara. I enjoy spending my free time working on personal projects and exploring new piano and violin repertoire. I'm also a part-time YouTube content creator–filming niche coding walkthrough tutorials–which is how I document my learning while sharing solutions with the online community. Check out my work under the \"Projects\" tab.",
     "resume": {
         "tagline": "👋 I'm a software engineer, product designer.",
         "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
@@ -239,6 +296,10 @@
         {
             "name": "PostgreSQL",
             "logo": "/images/data_storage/postgreSQL.png"
+        },
+        {
+            "name": "Core Data",
+            "logo": "/images/misc_techstack/core_data.png"
         }
 
     ]

@@ -33,39 +33,6 @@ const Blog = ({ posts }) => {
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  const createBlog = () => {
-    if (process.env.NODE_ENV === "development") {
-      fetch("/api/blog", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }).then(() => {
-        router.reload(window.location.pathname);
-      });
-    } else {
-      alert("This thing only works in development mode.");
-    }
-  };
-
-  const deleteBlog = (slug) => {
-    if (process.env.NODE_ENV === "development") {
-      fetch("/api/blog", {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          slug,
-        }),
-      }).then(() => {
-        router.reload(window.location.pathname);
-      });
-    } else {
-      alert("This thing only works in development mode.");
-    }
-  };
   return (
     showBlog.current && (
       <>
@@ -87,53 +54,11 @@ const Blog = ({ posts }) => {
               Projects.
             </h1>
             <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
-              {/* {posts &&
-                posts.map((post) => (
-                  <div
-                    className="cursor-pointer relative"
-                    key={post.slug}
-                    //aha
-                    onClick={() => Router.push(`/project/${post.slug}`)}
-                  >
-                    <img
-                      className="w-full h-60 rounded-lg shadow-lg object-cover"
-                      src={post.image}
-                      alt={post.title}
-                    ></img>
-                    <h2 className="mt-5 text-4xl">{post.title}</h2>
-                    <p className="mt-2 opacity-50 text-lg">{post.preview}</p>
-                    <span className="text-sm mt-5 opacity-25">
-                      {ISOToDate(post.date)}
-                    </span>
-                    {process.env.NODE_ENV === "development" && mounted && (
-                      <div className="absolute top-0 right-0">
-                        <Button
-                          onClick={(e) => {
-                            deleteBlog(post.slug);
-                            e.stopPropagation();
-                          }}
-                          type={"primary"}
-                        >
-                          Delete
-                        </Button>
-                      </div>
-                    )}
-                  </div>
-                ))} */}
                 {data.projects.slice().reverse().map((project) => (
                   <div className="justify-center cursor-pointer relative"
-                  key={project.id}
-                  onClick={() => Router.push({
-                    pathname: `/project/${project.id}`,
-                    query: {
-                      title: project.title,
-                      description: project.description,
-                      imgageSrc: project.imageSrc,
-                      url: project.url,
-                      techStack: project.techstack
-                    }
-                  })
-                }
+                  key={project.title}
+                  onClick={() => Router.push(`/project/${project.title}`)
+                  }
                   >
                   {/* flex and justify-end here makes sure the image is anchored to bottom */}
                   <div className={`flex flex-col items-start justify-end h-full mob:p-4 rounded-lg transition-all ease-out duration-300 ${
@@ -158,33 +83,9 @@ const Blog = ({ posts }) => {
             </div>
           </div>
         </div>
-        {/* {process.env.NODE_ENV === "development" && mounted && (
-          <div className="fixed bottom-6 right-6">
-            <Button onClick={createBlog} type={"primary"}>
-              Add New Post +{" "}
-            </Button>
-          </div>
-        )} */}
       </>
     )
   );
 };
-
-// export async function getStaticProps() {
-//   const posts = getAllPosts([
-//     "slug",
-//     "title",
-//     "image",
-//     "preview",
-//     "author",
-//     "date",
-//   ]);
-
-//   return {
-//     props: {
-//       posts: [...posts],
-//     },
-//   };
-// }
 
 export default Blog;
