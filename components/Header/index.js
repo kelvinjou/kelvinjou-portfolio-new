@@ -3,7 +3,6 @@ import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Button from "../Button";
-import Image from "next/image";
 // Local Data
 import data from "../../data/portfolio.json";
 
@@ -97,7 +96,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     Home
                   </Button>
                   {showBlog && (
-                    <Button onClick={() => router.push("/project")}>Projects</Button>
+                    <Button onClick={() => router.push("/blog")}>Projects</Button>
                   )}
                   {showResume && (
                     <Button
@@ -153,12 +152,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
-                <Image
+                <img
+                  className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                  width={25}
-                  height={25}
-                  >
-                </Image>
+                ></img>
               </Button>
             )}
           </div>
@@ -185,12 +182,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
-                <Image
+                <img
+                  className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                  width={25}
-                  height={25}
-                  >
-                </Image>
+                ></img>
               </Button>
             )}
           </div>
