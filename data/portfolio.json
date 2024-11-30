@@ -210,22 +210,22 @@
     ],
     "aboutpara": "I'm a first-year student studying computer engineering at University of California, Santa Barbara. I enjoy spending my free time working on personal projects and exploring new piano and violin repertoire. I'm also a part-time YouTube content creator–filming niche coding walkthrough tutorials–which is how I document my learning while sharing solutions with the online community. Check out my work under the \"Projects\" tab.",
     "resume": {
-        "tagline": "👋 I'm a software engineer, product designer.",
-        "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
+        "tagline": "CE @ UCSB & classically-trained musician",
+        "description": "Under development",
         "experiences": [
             {
                 "id": "1",
-                "dates": "March 2022 - Present",
-                "type": "Full Time",
-                "position": "Frontend Engineer at X",
-                "bullets": "Bullet One, Bullet Two"
+                "dates": "",
+                "type": "",
+                "position": "",
+                "bullets": ""
             },
             {
-                "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
-                "dates": "July 2020 - March 2022",
-                "type": "Full Time",
-                "position": "Frontend Engineer at X",
-                "bullets": "Worked on the frontend of a React application, Worked on the frontend of a React application"
+                "id": "",
+                "dates": "",
+                "type": "",
+                "position": "",
+                "bullets": ""
             }
         ],
         "education": {
