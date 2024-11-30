@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
@@ -13,7 +13,6 @@ import Cursor from "../components/Cursor";
 import Image from 'next/image'
 import { useTheme } from "next-themes";
 
-
 // Local Data
 import data from "../data/portfolio.json";
 import { language } from "gray-matter";
@@ -21,6 +20,8 @@ import GithubCard from "../components/GithubCard";
 
 export default function Home() {
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
@@ -45,6 +46,9 @@ export default function Home() {
       behavior: "smooth",
     });
   };
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useIsomorphicLayoutEffect(() => {
     stagger(

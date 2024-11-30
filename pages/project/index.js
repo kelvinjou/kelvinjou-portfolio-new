@@ -30,9 +30,9 @@ const Blog = ({ posts }) => {
     else router.push("/");
   }, []);
 
-  // useEffect(() => {
-  //   setMounted(true);
-  // }, []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     showBlog.current && (
       <>
