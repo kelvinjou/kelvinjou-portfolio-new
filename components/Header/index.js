@@ -34,13 +34,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 {data.darkMode && (
                   <Button
                     onClick={() =>
-                      setTheme(theme === "dark" ? "light" : "dark")
+                      setTheme(theme === "dark" && mounted ? "light" : "dark")
                     }
                   >
                     <img
                       className="h-6"
                       src={`/images/${
-                        theme === "dark" ? "moon.svg" : "sun.svg"
+                        theme === "dark" && mounted ? "moon.svg" : "sun.svg"
                       }`}
                     ></img>
                   </Button>
@@ -51,10 +51,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     className="h-5"
                     src={`/images/${
                       !open
-                        ? theme === "dark"
+                        ? theme === "dark" && mounted
                           ? "menu-white.svg"
                           : "menu.svg"
-                        : theme === "light"
+                        : theme === "light" && mounted
                         ? "cancel.svg"
                         : "cancel-white.svg"
                     }`}
@@ -150,11 +150,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             </Button>
             {mounted && theme && data.darkMode && (
               <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                onClick={() => setTheme(theme === "dark" && mounted ? "light" : "dark")}
               >
                 <img
                   className="h-6"
-                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                  src={`/images/${theme === "dark" && mounted ? "moon.svg" : "sun.svg"}`}
                 ></img>
               </Button>
             )}
@@ -180,11 +180,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
             {mounted && theme && data.darkMode && (
               <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                onClick={() => setTheme(theme === "dark" && mounted ? "light" : "dark")}
               >
                 <img
                   className="h-6"
-                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                  src={`/images/${theme === "dark" && mounted ? "moon.svg" : "sun.svg"}`}
                 ></img>
               </Button>
             )}
