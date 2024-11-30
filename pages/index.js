@@ -31,21 +31,21 @@ export default function Home() {
   const textFour = useRef();
 
   // Handling Scroll
+  const handleAboutScroll = () => {
+    window.scrollTo({
+      top: aboutRef.current.offsetTop - 75,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   const handleWorkScroll = () => {
     window.scrollTo({
-      top: workRef.current.offsetTop,
+      top: workRef.current.offsetTop - 75,
       left: 0,
       behavior: "smooth",
     });
   };
 
-  const handleAboutScroll = () => {
-    window.scrollTo({
-      top: aboutRef.current.offsetTop,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -70,8 +70,8 @@ export default function Home() {
 
       <div className="container mx-auto mb-10">
         <Header
-          handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
+          handleWorkScroll={handleWorkScroll}
         />
         <div className="laptop:mt-20 mt-10">
           <div className="mt-5">
