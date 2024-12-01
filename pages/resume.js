@@ -4,12 +4,15 @@ import Cursor from "../components/Cursor";
 import Header from "../components/Header";
 import ProjectResume from "../components/ProjectResume";
 import Socials from "../components/Socials";
-import Button from "../components/Button";
 import { useTheme } from "next-themes";
+import Button from "../components/Button";
+
 // Data
 import { name, showResume } from "../data/portfolio.json";
 import { resume } from "../data/portfolio.json";
 import data from "../data/portfolio.json";
+import { MdOutlineArrowOutward } from "react-icons/md";
+
 
 const Resume = () => {
   const router = useRouter();
@@ -33,8 +36,13 @@ const Resume = () => {
         <Header isBlog />
         {mount && (
           <div className="mt-10 w-full flex flex-col items-center">
+            <Button
+              onClick={() => router.push("/images/resume_file.pdf")}>
+              <h1 className="text-2xl font-bold">View PDF Resume Version</h1>
+              <MdOutlineArrowOutward className="ml-2 mb-2 text-2xl font-bold"/>
+            </Button>
             <div
-              className={`w-full ${
+              className={`w-full mt-10 ${
                 mount && theme.theme === "dark" ? "bg-slate-800" : "bg-gray-50"
               } max-w-4xl p-20 mob:p-5 desktop:p-20 rounded-lg shadow-sm`}
             >
@@ -48,18 +56,15 @@ const Resume = () => {
               </div>
               <div className="mt-5">
                 <h1 className="text-2xl font-bold">Experience</h1>
-
-                {resume.experiences.map(
-                  ({ id, dates, type, position, bullets }) => (
-                    <ProjectResume
-                      key={id}
-                      dates={dates}
-                      type={type}
-                      position={position}
-                      bullets={bullets}
-                    ></ProjectResume>
-                  )
-                )}
+                <div className="flex items-center">
+                  <Button
+                    onClick={() => router.push("/images/resume_file.pdf")}>
+                    <div>Refer to PDF Resume</div>
+                    <MdOutlineArrowOutward className="ml-2 mb-2"/>
+                  </Button>
+                </div>
+                  
+                
               </div>
               <div className="mt-5">
                 <h1 className="text-2xl font-bold">Education</h1>

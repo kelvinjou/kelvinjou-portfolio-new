@@ -210,24 +210,9 @@
     ],
     "aboutpara": "I'm a first-year student studying computer engineering at University of California, Santa Barbara. I enjoy spending my free time working on personal projects and exploring new piano and violin repertoire. I'm also a part-time YouTube content creator–filming niche coding walkthrough tutorials–which is how I document my learning while sharing solutions with the online community. Check out my work under the \"Projects\" tab.",
     "resume": {
-        "tagline": "CE @ UCSB & classically-trained musician",
+        "tagline": "CE '28 @ UCSB",
         "description": "Under development",
-        "experiences": [
-            {
-                "id": "1",
-                "dates": "",
-                "type": "",
-                "position": "",
-                "bullets": ""
-            },
-            {
-                "id": "",
-                "dates": "",
-                "type": "",
-                "position": "",
-                "bullets": ""
-            }
-        ],
+
         "education": {
             "universityName": "University of California, Santa Barbara",
             "universityDate": "2024-2028"
