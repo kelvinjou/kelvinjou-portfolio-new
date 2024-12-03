@@ -1,0 +1,291 @@
+{
+    "name": "Kelvin",
+    "headerTaglineOne": "Hiii 👋",
+    "headerTaglineTwo": "I'm Kelvin Jou –",
+    "headerTaglineThree": "student based in",
+    "headerTaglineFour": "Bay Area & Goleta, CA",
+    "showCursor": true,
+    "showBlog": true,
+    "darkMode": true,
+    "showResume": true,
+    "socials": [
+        {
+            "id": "1",
+            "title": "Github",
+            "icon-dark": "/images/socials/dark/logo-github.svg",
+            "icon-light": "/images/socials/light/logo-github.svg",
+            "link": "https://github.com/kelvinjou"
+        },
+        {
+            "id": "2",
+            "title": "LinkedIn",
+            "icon-dark": "/images/socials/dark/logo-linkedin.svg",
+            "icon-light": "/images/socials/light/logo-linkedin.svg",
+            "link": "https://www.linkedin.com/in/kelvinjou/"
+        },
+        {
+            "id": "3",
+            "title": "YouTube",
+            "icon-dark": "/images/socials/dark/logo-youtube.svg",
+            "icon-light": "/images/socials/light/logo-youtube.svg",
+            "link": "https://www.youtube.com/@kelvinjou-dev"
+        },
+        {
+            "id": "4",
+            "title": "Email",
+            "icon-dark": "/images/socials/dark/mail.svg",
+            "icon-light": "/images/socials/light/mail.svg",
+            "link": "mailto:kelvinj.developer@gmail.com"
+        }
+    ],
+    "projects": [
+        {
+            "title": "CreditCheck",
+            "description": "Help users optimize credit card rewards by recommending the best card to use for maximizing them",
+            "imageSrc": "/images/projects/creditcheck.png",
+            "width": 650,
+            "height": 450,
+            "url": "https://github.com/kelvinjou/Rewards",
+            "techstack": [
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                },        
+                {
+                    "name": "Realm",
+                    "logo": "/images/data_storage/realm.png"
+                }
+            ]
+        },
+        {
+            "title": "Transizion Project Capstone",
+            "description": "Educational web application developed for Transizion",
+            "imageSrc": "/images/projects/transizion.png",
+            "width": 950,
+            "height": 650,
+            "url": "https://projectcapstone.com",
+            "techstack": [
+                {
+                    "name": "Flutter",
+                    "logo": "/images/languages/flutter.png"
+                }
+            ]
+        },
+        {
+            "title": "Serv Host Portal",
+            "description": "Web portal for organizations to manage their events postings",
+            "imageSrc": "/images/projects/serv-host-portal.png",
+            "width": 950,
+            "height": 650,
+            "url": "http://host.goserv.org",
+            "techstack": [
+                {
+                    "name": "Flutter",
+                    "logo": "/images/languages/flutter.png"
+                },
+                {
+                    "name": "Firebase",
+                    "logo": "/images/data_storage/firebase.png"
+                }
+            ]
+        },
+        {
+            "title": "Serv",
+            "description": "Platform that helps high school students find service opportunities in their community",
+            "imageSrc": "/images/projects/serv.png",
+            "width": 446,
+            "height": 300,
+            "url": "https://apps.apple.com/us/app/go-serv/id1643955466",
+            "techstack": [
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                },
+                {
+                    "name": "Firebase",
+                    "logo": "/images/data_storage/firebase.png"
+                },
+                {
+                    "name": "Core Data",
+                    "logo": "/images/misc_techstack/core_data.png"
+                },
+                {
+                    "name": "Mapkit",
+                    "logo": "/images/misc_techstack/mapkit.png"
+                }
+            ]
+        },
+        {
+            "title": "Tunotes",
+            "description": "Generate music notations based on specific instrumental parts of any MIDI files",
+            "imageSrc": "/images/projects/tunotes.png",
+            "width": 800,
+            "height": 475,
+            "url": "https://github.com/kelvinjou/Tunotes",
+            "techstack": [
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                }
+            ]
+        },
+        {
+            "title": "CodeFormerUI",
+            "description": "UI built for CodeFormer blind face restoration transformer (NeurIPS2022)",
+            "imageSrc": "/images/projects/codeFormerUI.png",
+            "width": 950,
+            "height": 650,
+            "url": "https://github.com/kelvinjou/CodeFormerUI",
+            "techstack": [
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                },
+                {
+                    "name": "Pythonkit",
+                    "logo": "/images/misc_techstack/placeholder.png"
+                }
+            ]
+        },
+        {
+            "title": "Virtual Showrooms",
+            "description": "Create on-demand AR object files based on surrounding Li-DAR scan",
+            "imageSrc": "/images/projects/virtualshowrooms.png",
+            "width": 800,
+            "height": 650,
+            "url": "https://github.com/kelvinjou/VirtualShowrooms",
+            "techstack": [
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                },
+                {
+                    "name": "ARKit",
+                    "logo": "/images/misc_techstack/arkit.png"
+                },
+                {
+                    "name": "RealityKit",
+                    "logo": "/images/misc_techstack/realitykit.png"
+                },
+                {
+                    "name": "MetalKit",
+                    "logo": "/images/misc_techstack/metalkit.png"
+                }
+
+            ]
+        },
+        {
+            "title": "ExpressFlip",
+            "description": "PDF sheet music pagination with facial expressions",
+            "imageSrc": "/images/projects/expressflip.png",
+            "width": 350,
+            "height": 350,
+            "url": "https://apps.apple.com/us/app/expressflip/id6642683123",
+            "techstack": [
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                },
+                {
+                    "name": "ARKit",
+                    "logo": "/images/misc_techstack/arkit.png"
+                }
+            ]
+        }
+    ],
+    "updates": [
+        {
+            "id": "1",
+            "title": "ExpressFlip released",
+            "description": "Recently released my second iOS app, intended to help musicians flip music sheet music using facial queues",
+            "date": "09/02/2024"
+        },
+        {
+            "id": "2",
+            "title": "HAL Lab",
+            "description": "Will be collaborating at UCSB HAL lab for a new joint research project for the months to come",
+            "date": "11/24/2024"
+
+        }
+    ],
+    "aboutpara": "I'm a first-year student studying computer engineering at University of California, Santa Barbara. I enjoy spending my free time working on personal projects and exploring new piano and violin repertoire. I'm also a part-time YouTube content creator–filming niche coding walkthrough tutorials–which is how I document my learning while sharing solutions with the online community. Check out my work under the \"Projects\" tab.",
+    "resume": {
+        "tagline": "CE '28 @ UCSB",
+        "description": "Under development",
+
+        "education": {
+            "universityName": "University of California, Santa Barbara",
+            "universityDate": "2024-2028"
+        },
+        "languages": [
+            "Swift",
+            "Flutter",
+            "C++",
+            "Python",
+            "Java"
+        ],
+        "frameworks": [
+            "SwiftUI",
+            "Flutter",
+            "React"
+        ],
+        "cloud": [
+            "AWS",
+            "Firebase"
+        ]
+    },
+    "languages": [
+        {
+            "name": "C++",
+            "logo": "/images/languages/c++.png"
+        },
+        {
+            "name": "Swift",
+            "logo": "/images/languages/swift.png"
+        },
+        {
+            "name": "Python",
+            "logo": "/images/languages/python.png"
+        },
+        {
+            "name": "Java",
+            "logo": "/images/languages/java.png"
+        },
+        {
+            "name": "Flutter",
+            "logo": "/images/languages/flutter.png"
+        },
+        {
+            "name": "Javascript",
+            "logo": "/images/languages/js.png"
+        }
+
+    ],
+    "data_storage": [
+        {
+            "name": "Firebase",
+            "logo": "/images/data_storage/firebase.png"
+        },
+        {
+            "name": "Realm",
+            "logo": "/images/data_storage/realm.png"
+        },
+        {
+            "name": "AWS S3",
+            "logo": "/images/data_storage/aws_s3.png"
+        },
+        {
+            "name": "AWS DynamoDB",
+            "logo": "/images/data_storage/dynamodb.png"
+        },
+        {
+            "name": "PostgreSQL",
+            "logo": "/images/data_storage/postgreSQL.png"
+        },
+        {
+            "name": "Core Data",
+            "logo": "/images/misc_techstack/core_data.png"
+        }
+
+    ]
+}
