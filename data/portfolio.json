@@ -46,6 +46,7 @@
             "width": 650,
             "height": 450,
             "url": "https://github.com/kelvinjou/Rewards",
+            "type": "iOS",
             "techstack": [
                 {
                     "name": "Swift",
@@ -64,6 +65,7 @@
             "width": 650,
             "height": 450,
             "url": "",
+            "type": "iOS",
             "techstack": [
                 {
                     "name": "Swift",
@@ -82,6 +84,7 @@
             "width": 950,
             "height": 650,
             "url": "https://projectcapstone.com",
+            "type": "Web",
             "techstack": [
                 {
                     "name": "Flutter",
@@ -96,6 +99,7 @@
             "width": 950,
             "height": 650,
             "url": "http://host.goserv.org",
+            "type": "Web",
             "techstack": [
                 {
                     "name": "Flutter",
@@ -114,6 +118,7 @@
             "width": 446,
             "height": 300,
             "url": "https://apps.apple.com/us/app/go-serv/id1643955466",
+            "type": "iOS",
             "techstack": [
                 {
                     "name": "Swift",
@@ -140,6 +145,7 @@
             "width": 800,
             "height": 475,
             "url": "https://github.com/kelvinjou/Tunotes",
+            "type": "iOS",
             "techstack": [
                 {
                     "name": "Swift",
@@ -154,6 +160,7 @@
             "width": 950,
             "height": 650,
             "url": "https://github.com/kelvinjou/CodeFormerUI",
+            "type": "MacOS",
             "techstack": [
                 {
                     "name": "Swift",
@@ -172,6 +179,7 @@
             "width": 800,
             "height": 650,
             "url": "https://github.com/kelvinjou/VirtualShowrooms",
+            "type": "iOS",
             "techstack": [
                 {
                     "name": "Swift",
@@ -199,6 +207,7 @@
             "width": 800,
             "height": 600,
             "url": "",
+            "type": "Web",
             "techstack": [
                 {
                     "name": "Next.JS",
@@ -226,6 +235,7 @@
             "width": 350,
             "height": 350,
             "url": "https://apps.apple.com/us/app/expressflip/id6642683123",
+            "type": "iOS",
             "techstack": [
                 {
                     "name": "Swift",

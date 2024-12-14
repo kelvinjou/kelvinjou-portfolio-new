@@ -11,13 +11,36 @@ import { getAllPosts } from "../../utils/api";
 import Image from 'next/image'
 import { useTheme } from "next-themes";
 
+import { SegmentedControl } from '@mantine/core';
+
 
 const Blog = ({ posts }) => {
   const showBlog = useRef(data.showBlog);
   const text = useRef();
   const router = useRouter();
-  const [mounted, setMounted] = useState(false);
+
   const { theme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const [value, setValue] = useState('all');
+  const filteredProjects = data.projects.filter((project) => {
+    if (value === 'all') {
+      return true; // Return all projects if 'all' is selected
+    }
+    return project.type === value;
+  });
+
+
+
+  const backgroundColor = mounted && theme === 'dark' ? 'rgba(28, 34, 41, 0.7)' : '#edebeb'; // dark background (slate-800) and light background (slate-50) with lowered opacity
+  const hoverColor = mounted && theme === 'dark' ? 'rgba(100, 116, 139, 0.7)' : 'rgba(148, 163, 184, 1)'; // muted hover effect
+  const textColor = mounted && theme === 'dark' ? '#4d4b4b' : '#475569'; // slate-300 for unselected text in dark mode, slate-600 for light mode
+  const selectedTextColor = mounted && theme === 'dark' ? '#a1a1aa' : '#334155'; // slate-400 for dark mode, slate-700 for light mode
+
 
 
   useIsomorphicLayoutEffect(() => {
@@ -30,9 +53,7 @@ const Blog = ({ posts }) => {
     else router.push("/");
   }, []);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+
   return (
     showBlog.current && (
       <>
@@ -53,8 +74,40 @@ const Blog = ({ posts }) => {
             >
               Projects.
             </h1>
+
+            <SegmentedControl
+              withItemsBorders={false}
+              radius="md"
+              value={value}
+              onChange={setValue}
+              data={[
+                { label: 'Show All', value: 'all' },
+                { label: 'iOS', value: 'iOS' },
+                { label: 'MacOS', value: 'MacOS' },
+                { label: 'Web', value: 'Web' },
+              ]}
+              styles={{
+                root: {
+                  backgroundColor: backgroundColor,
+                  transition: 'background-color 0.3s ease',
+                },
+                label: {
+                  color: textColor,
+                  '&[data-active]': {
+                    color: selectedTextColor,
+                  },
+                  '&:hover': {
+                    backgroundColor: hoverColor,
+                    transform: 'scale(1.05)',
+                    transition: 'transform 0.3s ease, background-color 0.3s ease',
+                  },
+                },
+              }}
+            />
+
+
             <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
-                {data.projects.slice().reverse().map((project) => (
+                {filteredProjects.slice().reverse().map((project) => (
                   <div className="justify-center cursor-pointer relative"
                   key={project.title}
                   onClick={() => Router.push(`/project/${project.title}`)
