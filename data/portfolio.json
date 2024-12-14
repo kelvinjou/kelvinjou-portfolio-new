@@ -58,6 +58,24 @@
             ]
         },
         {
+            "title": "AR Experiments",
+            "description": "Simple iPadOS app for rendering .obj files through ARKit",
+            "imageSrc": "/images/projects/ar-experiments.png",
+            "width": 650,
+            "height": 450,
+            "url": "",
+            "techstack": [
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                },        
+                {
+                    "name": "ARKit",
+                    "logo": "/images/misc_techstack/arkit.png"
+                }
+            ]
+        },
+        {
             "title": "Transizion Project Capstone",
             "description": "Educational web application developed for Transizion",
             "imageSrc": "/images/projects/transizion.png",
@@ -175,6 +193,33 @@
             ]
         },
         {
+            "title": "GeoPointMemories",
+            "description": "Generates a heatmap of user photos, video/audio recordings, spontaneous thoughts when on a trip",
+            "imageSrc": "/images/projects/geopointmemories.png",
+            "width": 800,
+            "height": 600,
+            "url": "",
+            "techstack": [
+                {
+                    "name": "Next.JS",
+                    "logo": "/images/misc_techstack/nextjs.png"
+                },
+                {
+                    "name": "AWS DynamoDB",
+                    "logo": "/images/data_storage/dynamodb.png"
+                },
+                {
+                    "name": "AWS S3",
+                    "logo": "/images/data_storage/aws_s3.png"
+                },
+                {
+                    "name": "Mapbox",
+                    "logo": "/images/misc_techstack/mapbox.png"
+                }
+
+            ]
+        },
+        {
             "title": "ExpressFlip",
             "description": "PDF sheet music pagination with facial expressions",
             "imageSrc": "/images/projects/expressflip.png",
@@ -208,7 +253,7 @@
 
         }
     ],
-    "aboutpara": "I'm a first-year student studying computer engineering at University of California, Santa Barbara. I enjoy spending my free time working on personal projects and exploring new piano and violin repertoire. I'm also a part-time YouTube content creator–filming niche coding walkthrough tutorials–which is how I document my learning while sharing solutions with the online community. Check out my work under the \"Projects\" tab.",
+    "aboutpara": "I'm a first-year student studying computer engineering at University of California, Santa Barbara. I enjoy spending my free time working on personal projects and exploring new piano and violin repertoire. I'm also a part-time YouTube content creator–filming niche coding walkthrough tutorials–which is how I document my learning while sharing solutions with the online community. Check out my work under \"Projects\".",
     "resume": {
         "tagline": "CE '28 @ UCSB",
         "description": "Under development",
@@ -256,8 +301,8 @@
             "logo": "/images/languages/flutter.png"
         },
         {
-            "name": "Javascript",
-            "logo": "/images/languages/js.png"
+            "name": "Typescript",
+            "logo": "/images/languages/typescript.png"
         }
 
     ],

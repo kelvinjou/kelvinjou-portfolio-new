@@ -105,7 +105,7 @@ const Resume = () => {
                   </p>
                 </div>
               </div>
-              <div className="mt-5">
+              {/* <div className="mt-5">
                 <h1 className="text-2xl font-bold">Skills</h1>
                 <div className="flex mob:flex-col desktop:flex-row justify-between">
                   {resume.languages && (
@@ -147,7 +147,7 @@ const Resume = () => {
                     </div>
                   )}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         )}
