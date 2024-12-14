@@ -93,7 +93,7 @@ const Blog = ({ posts }) => {
                 },
                 label: {
                   color: textColor,
-                  '&[data-active]': {
+                  '&[dataActive]': {
                     color: selectedTextColor,
                   },
                   '&:hover': {
