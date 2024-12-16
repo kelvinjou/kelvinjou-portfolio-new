@@ -160,7 +160,7 @@
             "width": 950,
             "height": 650,
             "url": "https://github.com/kelvinjou/CodeFormerUI",
-            "type": "MacOS",
+            "type": "macOS",
             "techstack": [
                 {
                     "name": "Swift",

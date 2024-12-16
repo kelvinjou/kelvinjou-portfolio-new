@@ -5,13 +5,13 @@ import { stagger } from "../../animations";
 import Button from "../../components/Button";
 import Cursor from "../../components/Cursor";
 import Header from "../../components/Header";
+import SegmentedControl from "../../components/SegmentedControl";
 import data from "../../data/portfolio.json";
 import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 import { getAllPosts } from "../../utils/api";
 import Image from 'next/image'
 import { useTheme } from "next-themes";
 
-import { SegmentedControl } from '@mantine/core';
 
 
 const Blog = ({ posts }) => {
@@ -20,7 +20,6 @@ const Blog = ({ posts }) => {
   const router = useRouter();
 
   const { theme } = useTheme();
-
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
@@ -33,15 +32,6 @@ const Blog = ({ posts }) => {
     }
     return project.type === value;
   });
-
-
-
-  const backgroundColor = mounted && theme === 'dark' ? 'rgba(28, 34, 41, 0.7)' : '#edebeb'; // dark background (slate-800) and light background (slate-50) with lowered opacity
-  const hoverColor = mounted && theme === 'dark' ? 'rgba(100, 116, 139, 0.7)' : 'rgba(148, 163, 184, 1)'; // muted hover effect
-  const textColor = mounted && theme === 'dark' ? '#4d4b4b' : '#475569'; // slate-300 for unselected text in dark mode, slate-600 for light mode
-  const selectedTextColor = mounted && theme === 'dark' ? '#a1a1aa' : '#334155'; // slate-400 for dark mode, slate-700 for light mode
-
-
 
   useIsomorphicLayoutEffect(() => {
     stagger(
@@ -76,35 +66,32 @@ const Blog = ({ posts }) => {
             </h1>
 
             <SegmentedControl
-              withItemsBorders={false}
-              radius="md"
-              value={value}
-              onChange={setValue}
-              data={[
-                { label: 'Show All', value: 'all' },
-                { label: 'iOS', value: 'iOS' },
-                { label: 'MacOS', value: 'MacOS' },
-                { label: 'Web', value: 'Web' },
-              ]}
-              styles={{
-                root: {
-                  backgroundColor: backgroundColor,
-                  transition: 'background-color 0.3s ease',
-                },
-                label: {
-                  color: textColor,
-                  '&[dataActive]': {
-                    color: selectedTextColor,
-                  },
-                  '&:hover': {
-                    backgroundColor: hoverColor,
-                    transform: 'scale(1.05)',
-                    transition: 'transform 0.3s ease, background-color 0.3s ease',
-                  },
-                },
-              }}
-            />
-
+                    name="group-1"
+                    callback={(val) => setValue(val)}
+                    controlRef={useRef()}
+                    segments={[
+                      {
+                        label: "All",
+                        value: "all",
+                        ref: useRef()
+                      },
+                      {
+                        label: "iOS",
+                        value: "iOS",
+                        ref: useRef()
+                      },
+                      {
+                        label: "macOS",
+                        value: "macOS",
+                        ref: useRef()
+                      },
+                      {
+                        label: "Web",
+                        value: "Web",
+                        ref: useRef()
+                      }
+                    ]}
+                  />
 
             <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
                 {filteredProjects.slice().reverse().map((project) => (
