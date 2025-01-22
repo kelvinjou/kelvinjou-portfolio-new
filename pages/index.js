@@ -22,6 +22,10 @@ export default function Home() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
@@ -45,10 +49,6 @@ export default function Home() {
       behavior: "smooth",
     });
   };
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useIsomorphicLayoutEffect(() => {
     stagger(

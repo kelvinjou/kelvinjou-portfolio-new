@@ -5,6 +5,7 @@ import { stagger } from "../../animations";
 import Button from "../../components/Button";
 import Cursor from "../../components/Cursor";
 import Header from "../../components/Header";
+import SegmentedControl from "../../components/SegmentedControl";
 import data from "../../data/portfolio.json";
 import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 import { getAllPosts } from "../../utils/api";
@@ -12,13 +13,25 @@ import Image from 'next/image'
 import { useTheme } from "next-themes";
 
 
+
 const Blog = ({ posts }) => {
   const showBlog = useRef(data.showBlog);
   const text = useRef();
   const router = useRouter();
-  const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
 
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const [value, setValue] = useState('all');
+  const filteredProjects = data.projects.filter((project) => {
+    if (value === 'all') {
+      return true; // Return all projects if 'all' is selected
+    }
+    return project.type === value;
+  });
 
   useIsomorphicLayoutEffect(() => {
     stagger(
@@ -30,9 +43,7 @@ const Blog = ({ posts }) => {
     else router.push("/");
   }, []);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+
   return (
     showBlog.current && (
       <>
@@ -53,8 +64,37 @@ const Blog = ({ posts }) => {
             >
               Projects.
             </h1>
+
+            <SegmentedControl
+                    name="group-1"
+                    callback={(val) => setValue(val)}
+                    controlRef={useRef()}
+                    segments={[
+                      {
+                        label: "All",
+                        value: "all",
+                        ref: useRef()
+                      },
+                      {
+                        label: "iOS",
+                        value: "iOS",
+                        ref: useRef()
+                      },
+                      {
+                        label: "macOS",
+                        value: "macOS",
+                        ref: useRef()
+                      },
+                      {
+                        label: "Web",
+                        value: "Web",
+                        ref: useRef()
+                      }
+                    ]}
+                  />
+
             <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
-                {data.projects.slice().reverse().map((project) => (
+                {filteredProjects.slice().reverse().map((project) => (
                   <div className="justify-center cursor-pointer relative"
                   key={project.title}
                   onClick={() => Router.push(`/project/${project.title}`)

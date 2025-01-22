@@ -1,4 +1,6 @@
 import "../styles/globals.css";
+import "../components/SegmentedControl/styles.css";
+
 import { ThemeProvider } from "next-themes";
 
 const App = ({ Component, pageProps }) => {
