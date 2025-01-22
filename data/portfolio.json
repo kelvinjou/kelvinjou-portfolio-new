@@ -198,7 +198,7 @@
             "imageSrc": "/images/projects/geopointmemories.png",
             "width": 800,
             "height": 600,
-            "url": "",
+            "url": "https://geopointmemories.netlify.app",
             "techstack": [
                 {
                     "name": "Next.JS",
