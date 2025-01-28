@@ -202,7 +202,7 @@
         },
         {
             "title": "GeoPointMemories",
-            "description": "Generates a heatmap of user photos, video/audio recordings, spontaneous thoughts when on a trip",
+            "description": "[Under Development] Generates a heatmap of user photos, video/audio recordings, spontaneous thoughts when on a trip",
             "imageSrc": "/images/projects/geopointmemories.png",
             "width": 800,
             "height": 600,
@@ -246,6 +246,29 @@
                     "logo": "/images/misc_techstack/arkit.png"
                 }
             ]
+        },
+        {
+            "title": "ScribbleScript",
+            "description": "Compile handwritten code. Developed w/ Aarush Narang, Don Tran, and Bailey Say",
+            "imageSrc": "/images/projects/scribblescript.png",
+            "width": 350,
+            "height": 300,
+            "url": "https://devpost.com/software/scribble-script",
+            "type": "Web",
+            "techstack": [
+                {
+                    "name": "Typescript",
+                    "logo": "/images/languages/typescript.png"
+                },
+                {
+                    "name": "AWS EC2",
+                    "logo": "/images/data_storage/aws_ec2.png"
+                },
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                }
+            ]
         }
     ],
     "updates": [
@@ -260,7 +283,12 @@
             "title": "HAL Lab",
             "description": "Will be collaborating at UCSB HAL lab for a new joint research project for the months to come",
             "date": "11/24/2024"
-
+        },
+        {
+            "id": "3",
+            "title": "SBHacks",
+            "description": "Won best UI/UX at SBHacks XI for our project ScribbleScript",
+            "date": "01/12/2025"
         }
     ],
     "aboutpara": "I'm a first-year student studying computer engineering at University of California, Santa Barbara. I enjoy spending my free time working on personal projects and exploring new piano and violin repertoire. I'm also a part-time YouTube content creator–filming niche coding walkthrough tutorials–which is how I document my learning while sharing solutions with the online community. Check out my work under \"Projects\".",
