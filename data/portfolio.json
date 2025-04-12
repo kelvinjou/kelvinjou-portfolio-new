@@ -41,6 +41,7 @@
     "projects": [
         {
             "title": "CreditCheck",
+            "caption": "Help users optimize credit card rewards by recommending the best card to use for maximizing them",
             "description": "Help users optimize credit card rewards by recommending the best card to use for maximizing them",
             "imageSrc": "/images/projects/creditcheck.png",
             "width": 650,
@@ -51,7 +52,7 @@
                 {
                     "name": "Swift",
                     "logo": "/images/languages/swift.png"
-                },        
+                },
                 {
                     "name": "Realm",
                     "logo": "/images/data_storage/realm.png"
@@ -60,6 +61,7 @@
         },
         {
             "title": "AR Experiments",
+            "caption": "Simple iPadOS app for rendering .obj files through ARKit",
             "description": "Simple iPadOS app for rendering .obj files through ARKit",
             "imageSrc": "/images/projects/ar-experiments.png",
             "width": 650,
@@ -70,7 +72,7 @@
                 {
                     "name": "Swift",
                     "logo": "/images/languages/swift.png"
-                },        
+                },
                 {
                     "name": "ARKit",
                     "logo": "/images/misc_techstack/arkit.png"
@@ -79,6 +81,7 @@
         },
         {
             "title": "Transizion Project Capstone",
+            "caption": "Educational web application developed for Transizion",
             "description": "Educational web application developed for Transizion",
             "imageSrc": "/images/projects/transizion.png",
             "width": 950,
@@ -94,6 +97,7 @@
         },
         {
             "title": "Serv Host Portal",
+            "caption": "Web portal for organizations to manage their events postings",
             "description": "Web portal for organizations to manage their events postings",
             "imageSrc": "/images/projects/serv-host-portal.png",
             "width": 950,
@@ -113,6 +117,7 @@
         },
         {
             "title": "Serv",
+            "caption": "Platform that helps high school students find service opportunities in their community",
             "description": "Platform that helps high school students find service opportunities in their community",
             "imageSrc": "/images/projects/serv.png",
             "width": 446,
@@ -140,6 +145,7 @@
         },
         {
             "title": "Tunotes",
+            "caption": "Generate music notations based on specific instrumental parts of any MIDI files",
             "description": "Generate music notations based on specific instrumental parts of any MIDI files",
             "imageSrc": "/images/projects/tunotes.png",
             "width": 800,
@@ -155,6 +161,7 @@
         },
         {
             "title": "CodeFormerUI",
+            "caption": "UI built for CodeFormer blind face restoration transformer (NeurIPS2022)",
             "description": "UI built for CodeFormer blind face restoration transformer (NeurIPS2022)",
             "imageSrc": "/images/projects/codeFormerUI.png",
             "width": 950,
@@ -174,6 +181,7 @@
         },
         {
             "title": "Virtual Showrooms",
+            "caption": "Create on-demand AR object files based on surrounding Li-DAR scan",
             "description": "Create on-demand AR object files based on surrounding Li-DAR scan",
             "imageSrc": "/images/projects/virtualshowrooms.png",
             "width": 800,
@@ -197,11 +205,11 @@
                     "name": "MetalKit",
                     "logo": "/images/misc_techstack/metalkit.png"
                 }
-
             ]
         },
         {
             "title": "GeoPointMemories",
+            "caption": "[Under Development] Generates a heatmap of user photos, video/audio recordings, spontaneous thoughts when on a trip",
             "description": "[Under Development] Generates a heatmap of user photos, video/audio recordings, spontaneous thoughts when on a trip",
             "imageSrc": "/images/projects/geopointmemories.png",
             "width": 800,
@@ -225,11 +233,11 @@
                     "name": "Mapbox",
                     "logo": "/images/misc_techstack/mapbox.png"
                 }
-
             ]
         },
         {
             "title": "ExpressFlip",
+            "caption": "PDF sheet music pagination with facial expressions",
             "description": "PDF sheet music pagination with facial expressions",
             "imageSrc": "/images/projects/expressflip.png",
             "width": 350,
@@ -249,7 +257,8 @@
         },
         {
             "title": "ScribbleScript",
-            "description": "Compile handwritten code. Developed w/ Aarush Narang, Don Tran, and Bailey Say",
+            "caption": "Compile handwritten code on-device",
+            "description": "Compile handwritten code. The complementing Swift app supports Apple Pencil from PencilKit. Developed w/ Aarush Narang, Don Tran, and Bailey Say.",
             "imageSrc": "/images/projects/scribblescript.png",
             "width": 350,
             "height": 300,
@@ -267,6 +276,26 @@
                 {
                     "name": "Swift",
                     "logo": "/images/languages/swift.png"
+                }
+            ]
+        },
+        {
+            "title": "XR Rhythm Coach",
+            "caption": "VR wrist handtracking and AI coach platform",
+            "description": "A VR wrist handtracking and AI coach platform that help amateur musicians build polyrhythmic drumming skills. Used a Fast-Fourier Transform approach on wrist coordinate data retrieved from a Meta Quest 3 to analyze user rhythmic stability and accuracy. A UCSB Human-AI Integration Lab research project.",
+            "imageSrc": "/images/projects/drum.png",
+            "width": 350,
+            "height": 250,
+            "url": "https://photos.app.goo.gl/a1FbVjAzhZn56GS87",
+            "type": "Web",
+            "techstack": [
+                {
+                    "name": "C# Unity",
+                    "logo": "/images/languages/Csharp.png"
+                },
+                {
+                    "name": "Python",
+                    "logo": "/images/languages/python.png"
                 }
             ]
         }
@@ -295,7 +324,6 @@
     "resume": {
         "tagline": "CE '28 @ UCSB",
         "description": "Under development",
-
         "education": {
             "universityName": "University of California, Santa Barbara",
             "universityDate": "2024-2028"
@@ -341,8 +369,11 @@
         {
             "name": "Typescript",
             "logo": "/images/languages/typescript.png"
+        },
+        {
+            "name": "C# Unity",
+            "logo": "/images/languages/Csharp.png"
         }
-
     ],
     "data_storage": [
         {
@@ -369,6 +400,5 @@
             "name": "Core Data",
             "logo": "/images/misc_techstack/core_data.png"
         }
-
     ]
 }

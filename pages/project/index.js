@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import Head from "next/head";
 import Router, { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
@@ -112,7 +113,7 @@ const Blog = ({ posts }) => {
                       className="rounded-3xl object-contain self-center"
                     />
                     <h2 className="mt-5 text-4xl">{project.title}</h2>
-                    <p className="mt-2 opacity-50 text-lg">{project.description}</p>
+                    <p className="mt-2 opacity-50 text-lg">{project.caption}</p>
                   </div>
                     {/* <span className="text-sm mt-5 opacity-25">
                       {ISOToDate(post.date)}
