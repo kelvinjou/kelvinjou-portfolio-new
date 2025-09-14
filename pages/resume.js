@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Cursor from "../components/Cursor";
 import Header from "../components/Header";
 import ProjectResume from "../components/ProjectResume";
 import Socials from "../components/Socials";
@@ -27,11 +26,7 @@ const Resume = () => {
     }, []);
     return (
         <>
-            {data.showCursor && <Cursor />}
-            <div
-                className={`container mx-auto mb-10 ${data.showCursor && "cursor-none"
-                    }`}
-            >
+            <div className="container mx-auto mb-10">
                 <Header isBlog />
                 {mount && (
                     <div className="mt-10 w-full flex flex-col items-center">

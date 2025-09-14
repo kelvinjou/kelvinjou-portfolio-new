@@ -8,7 +8,6 @@ import { stagger } from "../../animations";
 import Button from "../../components/Button";
 import BlogEditor from "../../components/BlogEditor";
 import { useRouter } from "next/router";
-import Cursor from "../../components/Cursor";
 import data from "../../data/portfolio.json";
 import Image from 'next/image'
 import { useTheme } from "next-themes";
@@ -49,13 +48,8 @@ const ProjectDetails = () => {
         <title>{"Project - " + project.title}</title>
         <meta name="description" content={project.description} />
       </Head>
-      {data.showCursor && <Cursor />}
 
-      <div
-        className={`container mx-auto mt-10 ${
-          data.showCursor && "cursor-none"
-        }`}
-      >
+      <div className="container mx-auto mt-10">
         <Header isBlog={true} />
         <div className="mt-10 flex flex-col">
 

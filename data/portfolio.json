@@ -4,7 +4,7 @@
     "headerTaglineTwo": "I'm Kelvin Jou –",
     "headerTaglineThree": "student based in",
     "headerTaglineFour": "Bay Area & Goleta, CA",
-    "showCursor": true,
+    "showCursor": false,
     "showBlog": true,
     "darkMode": true,
     "showResume": true,
@@ -320,13 +320,13 @@
             "date": "01/12/2025"
         }
     ],
-    "aboutpara": "I'm a first-year student studying computer engineering at University of California, Santa Barbara. I enjoy spending my free time working on personal projects and exploring new piano and violin repertoire. I'm also a part-time YouTube content creator–filming niche coding walkthrough tutorials–which is how I document my learning while sharing solutions with the online community. Check out my work under \"Projects\".",
+    "aboutpara": "I study computer engineering at University of California, Santa Barbara. I enjoy spending my free time working on personal projects and exploring new piano and violin repertoire. I'm also a part-time YouTube content creator–filming niche coding walkthrough tutorials–which is how I document my learning while sharing solutions with the online community. Check out my work under \"Projects\".",
     "resume": {
         "tagline": "CE '28 @ UCSB",
         "description": "Under development",
         "education": {
             "universityName": "University of California, Santa Barbara",
-            "universityDate": "2024-2028"
+            "universityDate": "Sept 2024 - December 2027 (expected)"
         },
         "languages": [
             "Swift",
