@@ -29,33 +29,21 @@ const Resume = () => {
             <div className="container mx-auto mb-10">
                 <Header isBlog />
                 {mount && (
-                    <div className="mt-10 w-full flex flex-col items-center">
-                        <Button
-                            onClick={() => router.push("/images/resume_file.pdf")}>
-                            <h1 className="text-2xl font-bold">View PDF Resume Version</h1>
-                            <MdOutlineArrowOutward className="ml-2 mb-2 text-2xl font-bold" />
-                        </Button>
-                        <div
-                            className={`w-full mt-10 ${mount && theme.theme === "dark" ? "bg-slate-800" : "bg-gray-50"
-                                } max-w-4xl p-20 mob:p-5 desktop:p-20 rounded-lg shadow-sm`}
+                    <div className="mt-10 w-full flex flex-col items-center ">
+                        <button
+                          className="w-full mt-10 bg-[#7d5578] max-w-4xl p-20 mob:p-5 desktop:p-20 rounded-lg shadow-sm"
+                          onClick={() => router.push("/images/sep25_resume.pdf")}
+                        >
+                          <h1 className="text-2xl font-bold">View PDF Resume Version</h1>
+                          {/* <MdOutlineArrowOutward className="ml-2 mb-2 text-2xl font-bold" /> */}
+                        </button>
+                        <div className={`w-full mt-10 ${mount && theme.theme === "dark" ? "bg-slate-800" : "bg-gray-50"
+                              } max-w-4xl p-20 mob:p-5 desktop:p-20 rounded-lg shadow-sm`}
                         >
                             <h1 className="text-3xl font-bold">{name}</h1>
                             <h2 className="text-xl mt-5">{resume.tagline}</h2>
-                            {/* <h2 className="w-4/5 text-xl mt-5 opacity-50">
-                {resume.description}
-              </h2> */}
                             <div className="mt-2">
                                 <Socials />
-                            </div>
-                            <div className="mt-5">
-                                <h1 className="text-2xl font-bold">Experience</h1>
-                                <div className="flex items-center">
-                                    <Button
-                                        onClick={() => router.push("/images/resume_file.pdf")}>
-                                        <div>Refer to PDF Resume</div>
-                                        <MdOutlineArrowOutward className="ml-2 mb-2" />
-                                    </Button>
-                                </div>
                             </div>
 
                             <h1 className="text-2xl font-bold">Publications</h1>
@@ -98,49 +86,6 @@ const Resume = () => {
                                     </p>
                                 </div>
                             </div>
-                            {/* <div className="mt-5">
-                <h1 className="text-2xl font-bold">Skills</h1>
-                <div className="flex mob:flex-col desktop:flex-row justify-between">
-                  {resume.languages && (
-                    <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Languages</h2>
-                      <ul className="list-disc">
-                        {resume.languages.map((language, index) => (
-                          <li key={index} className="ml-5 py-2">
-                            {language}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  {resume.frameworks && (
-                    <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Frameworks</h2>
-                      <ul className="list-disc">
-                        {resume.frameworks.map((framework, index) => (
-                          <li key={index} className="ml-5 py-2">
-                            {framework}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  {resume.cloud && (
-                    <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Cloud</h2>
-                      <ul className="list-disc">
-                        {resume.cloud.map((other, index) => (
-                          <li key={index} className="ml-5 py-2">
-                            {other}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-              </div> */}
                         </div>
                     </div>
                 )}
