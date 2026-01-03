@@ -119,7 +119,7 @@ export default function Home() {
             ))}
           </div>
         </div> */}
-        <div className="laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
+        <div className="laptop:mt-20 p-2 laptop:p-0" ref={aboutRef}>
           <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
           <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
             {data.aboutpara}
@@ -130,8 +130,8 @@ export default function Home() {
           <h1 className="tablet:m-10 text-2xl text-bold">Languages.</h1>
           {/* flex wrap allows images to wrap onto a new row if no more space */}
           <div className="flex flex-wrap justify-center scrollbar-hide space-x-16 px-4">
-            {data.languages.map((language) => (
-              <div className="flex-shrink-0 columns-1 text-center">
+            {data.languages.map((language, index) => (
+              <div key={index} className="flex-shrink-0 columns-1 text-center">
                 <Image
                   src={language.logo}
                   alt={language.name}
@@ -149,8 +149,8 @@ export default function Home() {
           <h1 className="tablet:m-10 text-2xl text-bold">Storage Management.</h1>
           {/* flex wrap allows images to wrap onto a new row if no more space */}
           <div className="flex flex-wrap justify-center scrollbar-hide space-x-16 px-4">
-            {data.data_storage.map((storage) => (
-              <div className="flex-shrink-0 columns-1 text-center">
+            {data.data_storage.map((storage, index) => (
+              <div key={index} className="flex-shrink-0 columns-1 text-center">
                 <Image
                   src={storage.logo}
                   alt={storage.name}

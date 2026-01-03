@@ -64,7 +64,7 @@ const ProjectDetails = () => {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex justify-center items-center mt-20 w-auto px-6 py-2 ${mounted && theme === "dark" ? "text-white bg-slate-600" : "bg-slate-200"} hover:bg-[#7d5578] text-lg rounded-lg shadow-md transition duration-300`}
+              className={`flex justify-center items-center mt-20 w-auto px-6 py-2 ${mounted && theme === "dark" ? "text-white bg-slate-600 hover:bg-slate-700" : "bg-slate-200 text-black hover:bg-slate-300"} text-lg rounded-lg shadow-md transition duration-300`}
             >
               Link to product
             </a>
