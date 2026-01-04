@@ -55,7 +55,7 @@
                 },
                 {
                     "name": "Realm",
-                    "logo": "/images/data_storage/realm.png"
+                    "logo": "/images/frameworks_libraries/realm.png"
                 }
             ]
         },
@@ -111,7 +111,7 @@
                 },
                 {
                     "name": "Firebase",
-                    "logo": "/images/data_storage/firebase.png"
+                    "logo": "/images/frameworks_libraries/firebase.png"
                 }
             ]
         },
@@ -131,7 +131,7 @@
                 },
                 {
                     "name": "Firebase",
-                    "logo": "/images/data_storage/firebase.png"
+                    "logo": "/images/frameworks_libraries/firebase.png"
                 },
                 {
                     "name": "Core Data",
@@ -223,11 +223,11 @@
                 },
                 {
                     "name": "AWS DynamoDB",
-                    "logo": "/images/data_storage/dynamodb.png"
+                    "logo": "/images/frameworks_libraries/dynamodb.png"
                 },
                 {
                     "name": "AWS S3",
-                    "logo": "/images/data_storage/aws_s3.png"
+                    "logo": "/images/frameworks_libraries/aws_s3.png"
                 },
                 {
                     "name": "Mapbox",
@@ -271,7 +271,7 @@
                 },
                 {
                     "name": "AWS EC2",
-                    "logo": "/images/data_storage/aws_ec2.png"
+                    "logo": "/images/frameworks_libraries/aws_ec2.png"
                 },
                 {
                     "name": "Swift",
@@ -320,7 +320,7 @@
             "date": "01/12/2025"
         }
     ],
-    "aboutpara": "I study computer engineering at University of California, Santa Barbara. In my free time, I enjoy exploring new piano and violin repertoire, as well as improvising on the piano. I'm also very passionate about cars and am always up to date on the latest releases and news in the automotive world. On the technical side, I'm interested in compE's interdisciplinary nature, combining both hardware and software aspects of computing systems. Some topics I'm fascinated by include extended reality, physical AI, and cleantech.",
+    "aboutpara": "I study computer engineering at University of California, Santa Barbara. In my free time, I enjoy exploring new piano and violin repertoire, as well as improvising on the piano. I'm also very passionate about cars and am always hyped to learn about the latest model release or refresh. On the technical side, I'm interested in compE's interdisciplinary nature, combining both hardware and software aspects of computing systems. Some topics I'm fascinated by include extended reality, physical AI, and cleantech.",
     "resume": {
         "tagline": "CE '28 @ UCSB",
         "description": "Under development",
@@ -348,57 +348,180 @@
     "languages": [
         {
             "name": "C++",
-            "logo": "/images/languages/c++.png"
+            "logo": "/images/languages/c++.png",
+            "tier": 1
         },
         {
             "name": "Swift",
-            "logo": "/images/languages/swift.png"
+            "logo": "/images/languages/swift.png",
+            "tier": 1
         },
         {
             "name": "Python",
-            "logo": "/images/languages/python.png"
+            "logo": "/images/languages/python.png",
+            "tier": 1
         },
         {
             "name": "Java",
-            "logo": "/images/languages/java.png"
+            "logo": "/images/languages/java.png",
+            "tier": 2
         },
         {
             "name": "Flutter",
-            "logo": "/images/languages/flutter.png"
+            "logo": "/images/languages/flutter.png",
+            "tier": 2
         },
         {
             "name": "Typescript",
-            "logo": "/images/languages/typescript.png"
+            "logo": "/images/languages/typescript.png",
+            "tier": 2
         },
         {
-            "name": "C# Unity",
-            "logo": "/images/languages/Csharp.png"
+            "name": "C#",
+            "logo": "/images/languages/csharp2.png",
+            "tier": 3
+        },
+                {
+            "name": "Rust",
+            "logo": "/images/languages/rust.png",
+            "tier": 3
         }
     ],
-    "data_storage": [
+    "frameworks_libraries": [
         {
-            "name": "Firebase",
-            "logo": "/images/data_storage/firebase.png"
+            "name": "SwiftUI",
+            "logo": "/images/frameworks_libraries/swiftui.png",
+            "tier": 1
         },
         {
-            "name": "Realm",
-            "logo": "/images/data_storage/realm.png"
+            "name": "Flutter",
+            "logo": "/images/frameworks_libraries/flutter.png",
+            "tier": 1
+        },
+        {
+            "name": "Unity",
+            "logo": "/images/frameworks_libraries/unity2.png",
+            "tier": 1
+        },
+        {
+            "name": "UIKit",
+            "logo": "/images/frameworks_libraries/uikit.png",
+            "tier": 1
+        },
+        {
+            "name": "Gradio",
+            "logo": "/images/frameworks_libraries/gradio.png",
+            "tier": 1
+        },
+        {
+            "name": "FastAPI",
+            "logo": "/images/frameworks_libraries/fastapi.png",
+            "tier": 1
+        },
+                {
+            "name": "Django REST",
+            "logo": "/images/frameworks_libraries/djangorest.png",
+            "tier": 1
+        },
+        {
+            "name": "Git",
+            "logo": "/images/frameworks_libraries/git.png",
+            "tier": 1
+        },
+        {
+            "name": "Svelte",
+            "logo": "/images/frameworks_libraries/svelte.png",
+            "tier": 1
+        },
+        {
+            "name": "GCP",
+            "logo": "/images/frameworks_libraries/gcp.png",
+            "tier": 2
+        },
+        {
+            "name": "Next.js",
+            "logo": "/images/misc_techstack/nextjs.png",
+            "tier": 2
         },
         {
             "name": "AWS S3",
-            "logo": "/images/data_storage/aws_s3.png"
+            "logo": "/images/frameworks_libraries/aws_s3.png",
+            "tier": 2
         },
         {
             "name": "AWS DynamoDB",
-            "logo": "/images/data_storage/dynamodb.png"
+            "logo": "/images/frameworks_libraries/dynamodb.png",
+            "tier": 2
         },
         {
-            "name": "PostgreSQL",
-            "logo": "/images/data_storage/postgreSQL.png"
+            "name": "Three.js",
+            "logo": "/images/frameworks_libraries/threejs.png",
+            "tier": 2
         },
         {
-            "name": "Core Data",
-            "logo": "/images/misc_techstack/core_data.png"
+            "name": "WebGL",
+            "logo": "/images/frameworks_libraries/webgl.png",
+            "tier": 2
+        },
+        {
+            "name": "SmolAgents",
+            "logo": "/images/frameworks_libraries/smolagents.png",
+            "tier": 2
+        },
+        {
+            "name": "ChromaDB",
+            "logo": "/images/frameworks_libraries/chromadb.png",
+            "tier": 2
+        },
+        {
+            "name": "FastMCP",
+            "logo": "/images/frameworks_libraries/fastmcp.png",
+            "tier": 2
+        },
+            {
+            "name": "LMStudio",
+            "logo": "/images/frameworks_libraries/lmstudio.png",
+            "tier": 2
+        },
+        {
+            "name": "Meta XR SDK",
+            "logo": "/images/frameworks_libraries/metaxr.png",
+            "tier": 2
+        },
+        {
+            "name": "TestFlight",
+            "logo": "/images/frameworks_libraries/testflight.png",
+            "tier": 2
+        },
+        {
+            "name": "Realm DB",
+            "logo": "/images/frameworks_libraries/realm.png",
+            "tier": 2
+        },
+        {
+            "name": "Docker",
+            "logo": "/images/frameworks_libraries/docker.png",
+            "tier": 3
+        },
+        {
+            "name": "Vite",
+            "logo": "/images/frameworks_libraries/vite.png",
+            "tier": 3
+        },
+        {
+            "name": "AWS Lambda",
+            "logo": "/images/frameworks_libraries/lambda.png",
+            "tier": 3
+        },
+        {
+            "name": "AWS EC2",
+            "logo": "/images/frameworks_libraries/ec2.png",
+            "tier": 3
+        },
+        {
+            "name": "SocketIO",
+            "logo": "/images/frameworks_libraries/socketio.png",
+            "tier": 3
         }
     ]
 }

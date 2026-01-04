@@ -101,6 +101,7 @@ export default function Home() {
           </div>
 
           <Socials className="mt-2 laptop:mt-5" />
+          <p className="mt-4 text-sm opacity-50">Page last updated: January 3, 2026</p>
         </div>
         {/* <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
           <h1 className="text-2xl text-bold">Work.</h1>
@@ -127,7 +128,8 @@ export default function Home() {
         </div>
 
         <div className="laptop:mt-40 p-2 laptop:p-0" ref={workRef}>
-          <h1 className="tablet:m-10 text-2xl text-bold">Languages.</h1>
+
+          <h1 className="tablet:m-10 text-2xl text-bold">Languages</h1>
           {/* flex wrap allows images to wrap onto a new row if no more space */}
           <div className="flex flex-wrap justify-center scrollbar-hide space-x-16 px-4">
             {data.languages.map((language, index) => (
@@ -143,25 +145,67 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
 
-        <div className="laptop:mt-40 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl text-bold">Storage Management.</h1>
-          {/* flex wrap allows images to wrap onto a new row if no more space */}
-          <div className="flex flex-wrap justify-center scrollbar-hide space-x-16 px-4">
-            {data.data_storage.map((storage, index) => (
-              <div key={index} className="flex-shrink-0 columns-1 text-center">
-                <Image
-                  src={storage.logo}
-                  alt={storage.name}
-                  width={65}
-                  height={65}
-                  className="rounded-lg"
-                />
-                <div>{storage.name}</div>
+          <h1 className="tablet:m-10 text-2xl text-bold">Frameworks and Libraries</h1>
+          {/* Bubble-style layout with true hexagonal alignment */}
+          {(() => {
+            const items = [...data.frameworks_libraries];
+            const itemsPerRow = 6;
+            const verticalSpacing = 130;
+            const totalRows = Math.ceil(items.length / itemsPerRow);
+            const containerHeight = totalRows * verticalSpacing + 10;
+            
+            return (
+              <div 
+                className="relative px-4 mt-10 mb-10 max-w-[900px] mx-auto" 
+                style={{ minHeight: `${containerHeight}px` }}
+              >
+                {items.map((item, index) => {
+                  // Size based on tier (1 = largest, 2 = medium, 3 = smallest)
+                  const tierSizes = {
+                    1: { width: 85, height: 85, textSize: 'text-lg' },
+                    2: { width: 65, height: 65, textSize: 'text-base' },
+                    3: { width: 45, height: 45, textSize: 'text-sm' }
+                  };
+                  const size = tierSizes[item.tier] || tierSizes[2];
+                  
+                  // Create honeycomb pattern with proper hexagonal spacing
+                  const row = Math.floor(index / itemsPerRow);
+                  const col = index % itemsPerRow;
+                  
+                  // Horizontal spacing - items per row (increased for more spacing)
+                  const horizontalSpacing = 150;
+                  
+                  // Offset every other row by half the spacing for honeycomb effect
+                  const xOffset = (row % 2 === 1) ? horizontalSpacing / 2 : 0;
+                  const x = col * horizontalSpacing + xOffset;
+                  const y = row * verticalSpacing;
+                  
+                  return (
+                    <div 
+                      key={`skill-${index}`} 
+                      className="absolute text-center transition-transform hover:scale-110 cursor-pointer"
+                      style={{ 
+                        left: `${x}px`,
+                        top: `${y}px`,
+                        animation: `circleFloat ${10 + (index % 4) * 1}s ease-in-out infinite`,
+                        animationDelay: `${(index * 0.3) % 3}s`
+                      }}
+                    >
+                      <Image
+                        src={item.logo}
+                        alt={item.name}
+                        width={size.width}
+                        height={size.height}
+                        className="rounded-lg mx-auto"
+                      />
+                      <div className={`mt-2 ${size.textSize} font-medium`}>{item.name}</div>
+                    </div>
+                  );
+                })}
               </div>
-            ))}
-          </div>
+            );
+          })()}
         </div>
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
