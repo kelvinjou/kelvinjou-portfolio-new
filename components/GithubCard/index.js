@@ -14,7 +14,7 @@ const GithubCard = () => {
     >
       <div className="laptop:mt-30 p-2 laptop:p-0">
         <div className={`flex justify-center ${theme === "dark" ? "opacity-60" : "opacity-100"}`}>
-          <img src="http://ghchart.rshah.org/7734b7/kelvinjou" alt="2016rshah's Github chart" />
+          <img src="http://ghchart.rshah.org/7734b7/kelvinjou" alt="Kelvin's Github chart" />
         </div>
       </div>
     </div>
