@@ -418,7 +418,12 @@
             "logo": "/images/frameworks_libraries/fastapi.png",
             "tier": 1
         },
-                {
+        {
+            "name": "Firebase",
+            "logo": "/images/frameworks_libraries/firebase.png",
+            "tier": 1
+        },
+        {
             "name": "Django REST",
             "logo": "/images/frameworks_libraries/djangorest.png",
             "tier": 1
@@ -436,6 +441,11 @@
         {
             "name": "GCP",
             "logo": "/images/frameworks_libraries/gcp.png",
+            "tier": 2
+        },
+        {
+            "name": "Core Data",
+            "logo": "/images/misc_techstack/core_data.png",
             "tier": 2
         },
         {

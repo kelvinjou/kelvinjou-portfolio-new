@@ -10,9 +10,7 @@ const GithubCard = () => {
   }, []);
   return (
     <div
-      className={`m-5 w-full p-2 mob:p-4 rounded-lg transition-all ease-out duration-300 ${
-        mounted && theme === "dark" ? "hover:bg-slate-800" : "hover:bg-slate-50"
-      } hover:scale-150 link`}
+      className={`m-5 w-full p-2 mob:p-4 rounded-lg transition-all ease-out duration-300 link`} // h${ mounted && theme === "dark" ? "hover:bg-slate-800" : "hover:bg-slate-50" } over:scale-150
     >
       <div className="laptop:mt-30 p-2 laptop:p-0">
         <div className={`flex justify-center ${theme === "dark" ? "opacity-60" : "opacity-100"}`}>

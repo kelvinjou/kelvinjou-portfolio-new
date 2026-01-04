@@ -163,9 +163,9 @@ export default function Home() {
                 {items.map((item, index) => {
                   // Size based on tier (1 = largest, 2 = medium, 3 = smallest)
                   const tierSizes = {
-                    1: { width: 85, height: 85, textSize: 'text-lg' },
-                    2: { width: 65, height: 65, textSize: 'text-base' },
-                    3: { width: 45, height: 45, textSize: 'text-sm' }
+                    1: { width: 90, height: 90, textSize: 'text-lg' },
+                    2: { width: 60, height: 60, textSize: 'text-base' },
+                    3: { width: 40, height: 40, textSize: 'text-sm' }
                   };
                   const size = tierSizes[item.tier] || tierSizes[2];
                   
