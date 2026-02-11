@@ -213,7 +213,7 @@ export default function Home() {
           <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-16">
             {data.updates
             .slice()
-            .reverse() // reverse the order so the newest is displayed first
+            // .reverse() // reverse the order so the newest is displayed first
             .map((service, index) => (
               <ServiceCard
                 key={index}

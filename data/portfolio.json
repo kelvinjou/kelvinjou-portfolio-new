@@ -36,6 +36,13 @@
             "icon-dark": "/images/socials/dark/mail.svg",
             "icon-light": "/images/socials/light/mail.svg",
             "link": "mailto:kelvinj.developer@gmail.com"
+        },
+        {
+            "id": "5",
+            "title": "Google Scholar",
+            "icon-dark": "/images/socials/light/logo-google-scholar.png",
+            "icon-light": "/images/socials/light/logo-google-scholar.png",
+            "link": "https://scholar.google.com/citations?user=cFNlaw0AAAAJ&hl=en"
         }
     ],
     "projects": [
@@ -302,22 +309,22 @@
     ],
     "updates": [
         {
-            "id": "1",
-            "title": "ExpressFlip released",
-            "description": "Recently released my second iOS app, intended to help musicians flip music sheet music using facial queues",
-            "date": "09/02/2024"
-        },
-        {
-            "id": "2",
-            "title": "HAL Lab",
-            "description": "Will be collaborating at UCSB HAL lab for a new joint research project for the months to come",
-            "date": "11/24/2024"
+            "id": "4",
+            "title": "XARP Paper Featured",
+            "description": "Featured @ UCSB CRML Agentic AI Summit 2026",
+            "date": "01/23/2026"
         },
         {
             "id": "3",
             "title": "SBHacks",
             "description": "Won best UI/UX at SBHacks XI for our project ScribbleScript",
             "date": "01/12/2025"
+        },
+        {
+            "id": "2",
+            "title": "Human AI Experience Lab",
+            "description": "Will be joining HAX lab, working under PhD candidate Arthur Caetano on extended reality projects",
+            "date": "11/24/2024"
         }
     ],
     "aboutpara": "I study computer engineering at University of California, Santa Barbara. In my free time, I enjoy exploring new piano and violin repertoire, as well as improvising on the piano. I'm also very passionate about cars and am always hyped to learn about the latest model release or refresh. On the technical side, I'm interested in compE's interdisciplinary nature, combining both hardware and software aspects of computing systems. Some topics I'm fascinated by include extended reality, physical AI, and cleantech.",
@@ -404,11 +411,6 @@
             "tier": 1
         },
         {
-            "name": "UIKit",
-            "logo": "/images/frameworks_libraries/uikit.png",
-            "tier": 1
-        },
-        {
             "name": "Gradio",
             "logo": "/images/frameworks_libraries/gradio.png",
             "tier": 1
@@ -488,7 +490,7 @@
             "logo": "/images/frameworks_libraries/fastmcp.png",
             "tier": 2
         },
-            {
+        {
             "name": "LMStudio",
             "logo": "/images/frameworks_libraries/lmstudio.png",
             "tier": 2
@@ -496,6 +498,11 @@
         {
             "name": "Meta XR SDK",
             "logo": "/images/frameworks_libraries/metaxr.png",
+            "tier": 2
+        },
+                {
+            "name": "Roslyn",
+            "logo": "/images/frameworks_libraries/roslyn.png",
             "tier": 2
         },
         {
