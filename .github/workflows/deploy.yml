@@ -32,6 +32,9 @@ jobs:
       - name: Build static site
         run: npm run build
 
+      - name: Add custom domain
+        run: cp CNAME out/CNAME
+
       - name: Disable Jekyll
         run: touch out/.nojekyll
 
