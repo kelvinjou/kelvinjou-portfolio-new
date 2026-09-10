@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Button from "../Button";
 import Image from 'next/image';
 import { useTheme } from "next-themes";
 
@@ -15,15 +14,14 @@ const Socials = ({ className }) => {
   }, []);
 
   return (
-    <div className={`${className} flex flex-wrap mob:flex-nowrap link`}>
+    <div className={`${className || ""} social-links`} aria-label="Social links">
       {yourData.socials.map((social, index) => (
-        <Button key={index} onClick={() => window.open(social.link)}>
-          {/* {social.title} */}
+        <a key={index} href={social.link} target={social.link.startsWith("http") ? "_blank" : undefined} rel={social.link.startsWith("http") ? "noopener noreferrer" : undefined} className="social-link" aria-label={social.title}>
           <Image src={mounted && theme === "dark" ? social["icon-dark"] : social["icon-light"]} alt={social.title}
           width={25}
           height={25}
           ></Image>
-        </Button>
+        </a>
       ))}
     </div>
   );

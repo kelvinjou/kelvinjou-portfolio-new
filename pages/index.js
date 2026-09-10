@@ -1,233 +1,83 @@
-/* eslint-disable react/jsx-key */
-import { useRef, useState, useEffect } from "react";
-import Header from "../components/Header";
-import ServiceCard from "../components/ServiceCard";
-import Socials from "../components/Socials";
-import WorkCard from "../components/WorkCard";
-import { useIsomorphicLayoutEffect } from "../utils";
-import { stagger } from "../animations";
-import Footer from "../components/Footer";
 import Head from "next/head";
-import Button from "../components/Button";
-import Link from "next/link";
-import Image from 'next/image'
-import { useTheme } from "next-themes";
-
-// Local Data
+import { FiArrowRight, FiDownload, FiYoutube } from "react-icons/fi";
+import Header from "../components/Header";
+import ProjectCard from "../components/ProjectCard";
+import SkillBubbles from "../components/SkillBubbles";
+import Footer from "../components/Footer";
+import Badge from "../components/ui/Badge";
+import Button from "../components/ui/Button";
+import Card from "../components/ui/Card";
 import data from "../data/portfolio.json";
-import { language } from "gray-matter";
-import GithubCard from "../components/GithubCard";
 
 export default function Home() {
-  const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  // Ref
-  const workRef = useRef();
-  const aboutRef = useRef();
-  const textOne = useRef();
-  const textTwo = useRef();
-  const textThree = useRef();
-  const textFour = useRef();
-
-  // Handling Scroll
-  const handleAboutScroll = () => {
-    window.scrollTo({
-      top: aboutRef.current.offsetTop - 75,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
-  const handleWorkScroll = () => {
-    window.scrollTo({
-      top: workRef.current.offsetTop - 75,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
-
-  useIsomorphicLayoutEffect(() => {
-    stagger(
-      [textOne.current, textTwo.current, textThree.current, textFour.current],
-      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
-      { y: 0, x: 0, transform: "scale(1)" }
-    );
-  }, []);
+  const skills = [...data.languages, ...data.frameworks_libraries].filter((item, index, list) => list.findIndex((candidate) => candidate.name === item.name) === index);
+  const featuredProjects = data.projects.slice(-3).reverse();
+  const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
-    <div className="relative">
+    <>
       <Head>
-        <title>{data.name}</title>
+        <title>Kelvin Jou — Computer Engineer</title>
+        <meta name="description" content="Kelvin Jou builds extended-reality, lab software infrastructure, and Apple-platform projects." />
       </Head>
-
-      <div className="gradient-circle"></div>
-      <div className="gradient-circle-bottom"></div>
-
-      <div className="container mx-auto mb-10">
-        <Header
-          handleAboutScroll={handleAboutScroll}
-          handleWorkScroll={handleWorkScroll}
-        />
-        <div className="laptop:mt-20 mt-10">
-          <div className="mt-5">
-            <h1
-              ref={textOne}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
-            >
-              {data.headerTaglineOne}
-            </h1>
-            <h1
-              ref={textTwo}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineTwo}
-            </h1>
-            <h1
-              ref={textThree}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineThree}
-            </h1>
-            <h1
-              ref={textFour}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineFour}
-            </h1>
+      <main className="home-shell">
+        <Header handleAboutScroll={() => scrollTo("about")} handleWorkScroll={() => scrollTo("skills")} />
+        <section className="home-hero">
+          <div className="home-hero-copy">
+            <Badge>Computer Engineering &apos;28 · UCSB</Badge>
+            <h1>Kelvin Jou</h1>
+            <p className="home-caption"><em>Bay Area &amp; Goleta, CA · Updated 09/09/26</em></p>
+            <p className="home-intro">I build extended-reality, lab software infra and Apple-platform projects.</p>
+            <div className="home-actions">
+              <Button href="/project">Projects <FiArrowRight aria-hidden="true" /></Button>
+              <Button href="/resume" variant="outline">Résumé <FiDownload aria-hidden="true" /></Button>
+            </div>
+            <div className="home-facts"><span>XR · Physical AI · Apple platforms</span></div>
           </div>
+        </section>
 
-          <Socials className="mt-2 laptop:mt-5" />
-          <p className="mt-4 text-sm opacity-50">Page last updated: January 3, 2026</p>
-        </div>
-        {/* <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <h1 className="text-2xl text-bold">Work.</h1>
+        <section className="home-section" id="projects">
+          <div className="section-heading-row">
+            <div><p className="home-kicker">Selected work</p><h2>Recent projects</h2></div>
+            <Button href="/project" variant="ghost">View all <FiArrowRight aria-hidden="true" /></Button>
+          </div>
+          <div className="home-project-grid">{featuredProjects.map((project) => <ProjectCard project={project} key={project.title} />)}</div>
+        </section>
 
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
-            {data.projects.map((project) => (
-              // aha
-              <WorkCard
-                key={project.id}
-                img={project.imageSrc}
-                name={project.title}
-                description={project.description}
-                onClick={() => window.open(project.url)}
+        <section className="home-section home-about" id="about">
+          <div><p className="home-kicker">About</p><h2>Background</h2></div>
+          <div className="home-about-content">
+            <p>{data.aboutpara}</p>
+            <div className="home-about-youtube">
+              <a href="https://www.youtube.com/@kelvinjou" target="_blank" rel="noreferrer">
+                <FiYoutube aria-hidden="true" /> YouTube channel <FiArrowRight aria-hidden="true" />
+              </a>
+              <p>Back in high school, I published various walkthrough tutorials on building interesting applications with quirky libraries and tools in Swift and Python.</p>
+            </div>
+          </div>
+        </section>
 
-              />
+        <section className="home-section home-skills" id="skills">
+          <div className="section-heading-row">
+            <div><p className="home-kicker">Toolkit</p><h2>Technologies I work with</h2></div>
+          </div>
+          <SkillBubbles items={skills} projects={data.projects} />
+        </section>
+
+        <section className="home-section home-updates">
+          <div className="section-heading-row"><div><p className="home-kicker">Now &amp; next</p><h2>Recent updates</h2></div></div>
+          <div className="updates-grid">
+            {data.updates.map((update) => (
+              <Card as="article" className="update-card" key={update.id}>
+                <time>{update.date}</time><h3>{update.title}</h3><p>{update.description}</p>
+              </Card>
             ))}
           </div>
-        </div> */}
-        <div className="laptop:mt-20 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-            {data.aboutpara}
-          </p>
-        </div>
+        </section>
 
-        <div className="laptop:mt-40 p-2 laptop:p-0" ref={workRef}>
-
-          <h1 className="tablet:m-10 text-2xl text-bold">Languages</h1>
-          {/* flex wrap allows images to wrap onto a new row if no more space */}
-          <div className="flex flex-wrap justify-center scrollbar-hide space-x-16 px-4">
-            {data.languages.map((language, index) => (
-              <div key={index} className="flex-shrink-0 columns-1 text-center">
-                <Image
-                  src={language.logo}
-                  alt={language.name}
-                  width={65}
-                  height={65}
-                  className="rounded-lg"
-                />
-                <div>{language.name}</div>
-              </div>
-            ))}
-          </div>
-
-          <h1 className="tablet:m-10 text-2xl text-bold">Frameworks and Libraries</h1>
-          {/* Bubble-style layout with true hexagonal alignment */}
-          {(() => {
-            const items = [...data.frameworks_libraries];
-            const itemsPerRow = 6;
-            const verticalSpacing = 130;
-            const totalRows = Math.ceil(items.length / itemsPerRow);
-            const containerHeight = totalRows * verticalSpacing + 10;
-            
-            return (
-              <div 
-                className="relative px-4 mt-10 mb-10 max-w-[900px] mx-auto" 
-                style={{ minHeight: `${containerHeight}px` }}
-              >
-                {items.map((item, index) => {
-                  // Size based on tier (1 = largest, 2 = medium, 3 = smallest)
-                  const tierSizes = {
-                    1: { width: 90, height: 90, textSize: 'text-lg' },
-                    2: { width: 60, height: 60, textSize: 'text-base' },
-                    3: { width: 40, height: 40, textSize: 'text-sm' }
-                  };
-                  const size = tierSizes[item.tier] || tierSizes[2];
-                  
-                  // Create honeycomb pattern with proper hexagonal spacing
-                  const row = Math.floor(index / itemsPerRow);
-                  const col = index % itemsPerRow;
-                  
-                  // Horizontal spacing - items per row (increased for more spacing)
-                  const horizontalSpacing = 150;
-                  
-                  // Offset every other row by half the spacing for honeycomb effect
-                  const xOffset = (row % 2 === 1) ? horizontalSpacing / 2 : 0;
-                  const x = col * horizontalSpacing + xOffset;
-                  const y = row * verticalSpacing;
-                  
-                  return (
-                    <div 
-                      key={`skill-${index}`} 
-                      className="absolute text-center transition-transform hover:scale-110 cursor-pointer"
-                      style={{ 
-                        left: `${x}px`,
-                        top: `${y}px`,
-                        animation: `circleFloat ${10 + (index % 4) * 1}s ease-in-out infinite`,
-                        animationDelay: `${(index * 0.3) % 3}s`
-                      }}
-                    >
-                      <Image
-                        src={item.logo}
-                        alt={item.name}
-                        width={size.width}
-                        height={size.height}
-                        className="rounded-lg mx-auto"
-                      />
-                      <div className={`mt-2 ${size.textSize} font-medium`}>{item.name}</div>
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          })()}
-        </div>
-
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl text-bold">Updates.</h1>
-          <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-16">
-            {data.updates
-            .slice()
-            // .reverse() // reverse the order so the newest is displayed first
-            .map((service, index) => (
-              <ServiceCard
-                key={index}
-                name={service.title}
-                description={service.description}
-                date={service.date}
-              />
-            ))}
-          </div>
-        </div>
-        
-        <GithubCard />
+        <div className="home-contact-text">kelvinj[dot]developer[at]gmail[dot]com</div>
         <Footer />
-      </div>
-    </div>
+      </main>
+    </>
   );
 }

@@ -1,126 +1,37 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import Head from "next/head";
-import Router, { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
-import { stagger } from "../../animations";
-import Button from "../../components/Button";
+import { useMemo, useState } from "react";
 import Header from "../../components/Header";
-import SegmentedControl from "../../components/SegmentedControl";
+import ProjectCard from "../../components/ProjectCard";
+import ProjectFilter from "../../components/ProjectFilter";
 import data from "../../data/portfolio.json";
-import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
-import { getAllPosts } from "../../utils/api";
-import Image from 'next/image'
-import { useTheme } from "next-themes";
 
+const filters = ["All", "iOS", "macOS", "Web", "XR"];
 
-
-const Blog = ({ posts }) => {
-  const showBlog = useRef(data.showBlog);
-  const text = useRef();
-  const router = useRouter();
-
-  const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const [value, setValue] = useState('all');
-  const filteredProjects = data.projects.filter((project) => {
-    if (value === 'all') {
-      return true; // Return all projects if 'all' is selected
-    }
-    return project.type === value;
-  });
-
-  useIsomorphicLayoutEffect(() => {
-    stagger(
-      [text.current],
-      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
-      { y: 0, x: 0, transform: "scale(1)" }
-    );
-    if (showBlog.current) stagger([text.current], { y: 30 }, { y: 0 });
-    else router.push("/");
-  }, []);
-
+export default function Projects() {
+  const [filter, setFilter] = useState("All");
+  const projects = useMemo(() => data.projects.slice().reverse().filter((project) => filter === "All" || project.type === filter), [filter]);
 
   return (
-    showBlog.current && (
-      <>
-        <Head>
-          <title>Projects</title>
-        </Head>
-        <div className="container mx-auto mb-10">
-          <Header isBlog={true}></Header>
-          <div className="mt-10">
-            <h1
-              ref={text}
-              className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-full"
-            >
-              Projects.
-            </h1>
-
-            <SegmentedControl
-                    name="group-1"
-                    callback={(val) => setValue(val)}
-                    controlRef={useRef()}
-                    segments={[
-                      {
-                        label: "All",
-                        value: "all",
-                        ref: useRef()
-                      },
-                      {
-                        label: "iOS",
-                        value: "iOS",
-                        ref: useRef()
-                      },
-                      {
-                        label: "macOS",
-                        value: "macOS",
-                        ref: useRef()
-                      },
-                      {
-                        label: "Web",
-                        value: "Web",
-                        ref: useRef()
-                      }
-                    ]}
-                  />
-
-            <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
-                {filteredProjects.slice().reverse().map((project) => (
-                  <div className="justify-center cursor-pointer relative"
-                  key={project.title}
-                  onClick={() => Router.push(`/project/${project.title}`)
-                  }
-                  >
-                  {/* flex and justify-end here makes sure the image is anchored to bottom */}
-                  <div className={`flex flex-col items-start justify-end h-full mob:p-4 rounded-lg transition-all ease-out duration-300 ${
-                    mounted && theme === "dark" ? "hover:bg-slate-800" : "hover:bg-slate-50"} hover:scale-105 link`}
-                  >
-                    <Image
-                      src={project.imageSrc}
-                      width={project.width}
-                      height={project.height}
-                      alt={project.id}
-                      className="rounded-3xl object-contain self-center"
-                    />
-                    <h2 className="mt-5 text-4xl">{project.title}</h2>
-                    <p className="mt-2 opacity-50 text-lg">{project.caption}</p>
-                  </div>
-                    {/* <span className="text-sm mt-5 opacity-25">
-                      {ISOToDate(post.date)}
-                    </span> */}
-                  </div>
-                ))
-                }
-            </div>
-          </div>
+    <>
+      <Head>
+        <title>Projects — Kelvin Jou</title>
+        <meta name="description" content="Selected product, research, and engineering work by Kelvin Jou." />
+      </Head>
+      <main className="project-shell">
+        <Header isBlog />
+        <header className="project-intro">
+          <p className="project-eyebrow">Selected work</p>
+          <h1>Projects</h1>
+          <p className="project-dek">A collection of products and experiments across spatial computing, Apple platforms, and the web.</p>
+        </header>
+        <div className="project-toolbar">
+          <ProjectFilter options={filters} value={filter} onChange={setFilter} />
+          <p className="project-count" aria-live="polite">{projects.length} {projects.length === 1 ? "project" : "projects"}</p>
         </div>
-      </>
-    )
+        <section className="project-grid" aria-label={`${filter} projects`}>
+          {projects.map((project, index) => <ProjectCard key={project.title} project={project} priority={index < 3} />)}
+        </section>
+      </main>
+    </>
   );
-};
-
-export default Blog;
+}

@@ -246,7 +246,7 @@
             "title": "ExpressFlip",
             "caption": "PDF sheet music pagination with facial expressions",
             "description": "PDF sheet music pagination with facial expressions",
-            "imageSrc": "/images/projects/expressflip.png",
+            "imageSrc": "/images/projects/expressflip_app_icon.png",
             "width": 350,
             "height": 350,
             "url": "https://apps.apple.com/us/app/expressflip/id6642683123",
@@ -294,7 +294,7 @@
             "width": 350,
             "height": 250,
             "url": "https://photos.app.goo.gl/a1FbVjAzhZn56GS87",
-            "type": "Web",
+            "type": "XR",
             "techstack": [
                 {
                     "name": "C# Unity",
@@ -303,6 +303,142 @@
                 {
                     "name": "Python",
                     "logo": "/images/languages/python.png"
+                }
+            ]
+        },
+        {
+            "title": "SceneItAll",
+            "caption": "ARKit LiDAR-driven interior redesigner with agent planning",
+            "description": "An iOS app that scans a room with Apple RoomPlan, renders it in RealityKit, and uses a Gemini-powered agent to suggest and place IKEA furniture. Retrieval is driven by OpenAI's CLIP image/text embeddings stored in MongoDB Atlas Vector Search.",
+            "imageSrc": "/images/projects/sceneitall.png",
+            "width": 350,
+            "height": 250,
+            "url": "https://github.com/aarush-narang/SceneItAll",
+            "type": "iOS",
+            "techstack": [
+                {
+                    "name": "Swift",
+                    "logo": "/images/languages/swift.png"
+                },
+                {
+                    "name": "SwiftUI",
+                    "logo": "/images/frameworks_libraries/swiftui.png"
+                },
+                {
+                    "name": "ARKit",
+                    "logo": "/images/misc_techstack/arkit.png"
+                },
+                {
+                    "name": "Python",
+                    "logo": "/images/languages/python.png"
+                },
+                {
+                    "name": "MongoDB Atlas",
+                    "logo": "/images/frameworks_libraries/mongodb.png"
+                },
+                {
+                    "name": "AWS S3",
+                    "logo": "/images/frameworks_libraries/aws_s3.png"
+                }
+            ]
+        },
+        {
+            "title": "BioPACIFIC Machine Assisted Product Screening (MAPS)",
+            "caption": "Platform for rating bio-derived monomers accelerating polymer discovery",
+            "description": "Project page here: https://biopacificmip.org/research/MAPS",
+            "imageSrc": "/images/company_logos/BioPacificMIP.png",
+            "width": 350,
+            "height": 250,
+            "url": "https://apps.apple.com/us/app/biopacific-mip-maps/id6754097392",
+            "type": "iOS",
+            "techstack": [
+                {
+                    "name": "Flutter",
+                    "logo": "/images/languages/flutter.png"
+                },
+                {
+                    "name": "TestFlight",
+                    "logo": "/images/frameworks_libraries/testflight.png"
+                },
+                {
+                    "name": "Django OAuth",
+                    "logo": "/images/frameworks_libraries/djangorest.png"
+                },
+                {
+                    "name": "Django REST",
+                    "logo": "/images/frameworks_libraries/djangorest.png"
+                },
+                {
+                    "name": "GCP",
+                    "logo": "/images/frameworks_libraries/gcp.png"
+                }
+            ]
+        },
+        {
+            "title": "BioPACIFIC Electronic Lab Notebook (ELN)",
+            "caption": "Web Platform for recording experimentation protocols linked to UCSB & UCLA facility instrumentation data",
+            "description": "Co-developed with Chris Dunham https://biopacificmip.org/platform/digital-ecosystem",
+            "imageSrc": "/images/projects/ELN.png",
+            "width": 350,
+            "height": 250,
+            "url": "https://bpm-portal.cnsi.ucsb.edu",
+            "type": "Web",
+            "techstack": [
+                {
+                    "name": "Rust",
+                    "logo": "/images/languages/rust.png"
+                },
+                {
+                    "name": "Svelte",
+                    "logo": "/images/frameworks_libraries/svelte.png"
+                },
+                {
+                    "name": "Django REST",
+                    "logo": "/images/frameworks_libraries/djangorest.png"
+                },
+                {
+                    "name": "Docker",
+                    "logo": "/images/frameworks_libraries/docker.png"
+                }
+            ]
+        },
+        {
+            "title": "XARP (ACM SIGCHI EICS 2026)",
+            "caption": "Declarative Python agent toolkit for building extended reality applications",
+            "description": "A collaboration with Ph.D. candidate Arthur Caetano and the UCSB Human-AI Integration Lab, XARP is a declarative Python agent toolkit for building extended reality applications. It allows developers to create intelligent agents that can perceive, reason, and act in virtual environments, enabling the creation of immersive and interactive experiences.",
+            "imageSrc": "/images/projects/XARP.gif",
+            "width": 350,
+            "height": 250,
+            "url": "https://github.com/HAL-UCSB/xarp",
+            "type": "XR",
+            "techstack": [
+                {
+                    "name": "Python",
+                    "logo": "/images/languages/python.png"
+                },
+                {
+                    "name": "FastMCP",
+                    "logo": "/images/frameworks_libraries/fastmcp.png"
+                },
+                {
+                    "name": "Gradio",
+                    "logo": "/images/frameworks_libraries/gradio.png"
+                },
+                {
+                    "name": "SmolAgents",
+                    "logo": "/images/frameworks_libraries/smolagents.png"
+                },
+                {
+                    "name":"C# Unity",
+                    "logo": "/images/languages/Csharp.png"
+                },
+                {
+                    "name": "Meta XR SDK",
+                    "logo": "/images/frameworks_libraries/metaxr.png"
+                },
+                {
+                    "name": "Roslyn",
+                    "logo": "/images/frameworks_libraries/roslyn.png"
                 }
             ]
         }
@@ -388,7 +524,7 @@
             "logo": "/images/languages/csharp2.png",
             "tier": 3
         },
-                {
+        {
             "name": "Rust",
             "logo": "/images/languages/rust.png",
             "tier": 3

@@ -1,21 +1,28 @@
 import { Popover } from "@headlessui/react";
-import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
 
+/*
+ * Theme switching is temporarily disabled while the portfolio is light-only.
+ * Restore the useTheme import and render a ThemeToggle in the header to enable it.
+ *
+ * const ThemeToggle = () => {
+ *   const { theme, setTheme } = useTheme();
+ *   return (
+ *     <Button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+ *       <img className="h-6" src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`} alt="Change color theme" />
+ *     </Button>
+ *   );
+ * };
+ */
+
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
 
   const { name, showBlog, showResume } = data;
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <>
@@ -31,41 +38,17 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </h1>
 
               <div className="flex items-center">
-                {data.darkMode && (
-                  <Button
-                    onClick={() =>
-                      setTheme(theme === "dark" && mounted ? "light" : "dark")
-                    }
-                  >
-                    <img
-                      className="h-6"
-                      src={`/images/${
-                        theme === "dark" && mounted ? "moon.svg" : "sun.svg"
-                      }`}
-                    ></img>
-                  </Button>
-                )}
-
                 <Popover.Button>
                   <img
                     className="h-5"
-                    src={`/images/${
-                      !open
-                        ? theme === "dark" && mounted
-                          ? "menu-white.svg"
-                          : "menu.svg"
-                        : theme === "light" && mounted
-                        ? "cancel.svg"
-                        : "cancel-white.svg"
-                    }`}
-                  ></img>
+                    src={`/images/${open ? "cancel.svg" : "menu.svg"}`}
+                    alt={open ? "Close navigation" : "Open navigation"}
+                  />
                 </Popover.Button>
               </div>
             </div>
             <Popover.Panel
-              className={`absolute right-0 z-10 w-11/12 p-4 ${
-                mounted && theme === "dark" ? "bg-slate-800" : "bg-white"
-              } shadow-md rounded-md`}
+              className="absolute right-0 z-10 w-11/12 p-4 bg-white shadow-md rounded-md"
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
@@ -76,19 +59,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
                   {showResume && (
                     <Button
-                      onClick={() =>
-                        window.open("mailto:kelvinj.developer@gmail.com")
-                      }
+                      onClick={() => router.push("/resume")}
                     >
                       Resume
                     </Button>
                   )}
-
-                  <Button
-                    onClick={() => window.open("mailto:kelvinj.developer@gmail.com")}
-                  >
-                    Contact
-                  </Button>
                 </div>
               ) : (
                 <div className="grid grid-cols-1">
@@ -106,12 +81,6 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       Resume
                     </Button>
                   )}
-
-                  <Button
-                    onClick={() => window.open("mailto:kelvinj.developer@gmail.com")}
-                  >
-                    Contact
-                  </Button>
                 </div>
               )}
             </Popover.Panel>
@@ -119,9 +88,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         )}
       </Popover>
       <div
-        className={`mt-5 hidden flex-row items-center justify-between sticky px-4 py-2 rounded-2xl ${
-          mounted && theme === "light" ? "bg-white" : "bg-slate-800 bg-opacity-95"
-        } dark:text-white top-2 z-10 tablet:flex`}
+        className="mt-5 hidden flex-row items-center justify-between sticky px-4 py-2 rounded-2xl bg-white top-2 z-10 tablet:flex"
       >
         <h1
           onClick={() => router.push("/")}
@@ -144,20 +111,6 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 Resume
               </Button>
             )}
-
-            <Button onClick={() => window.open("mailto:kelvinj.developer@gmail.com")}>
-              Contact
-            </Button>
-            {mounted && theme && data.darkMode && (
-              <Button
-                onClick={() => setTheme(theme === "dark" && mounted ? "light" : "dark")}
-              >
-                <img
-                  className="h-6"
-                  src={`/images/${theme === "dark" && mounted ? "moon.svg" : "sun.svg"}`}
-                ></img>
-              </Button>
-            )}
           </div>
         ) : (
           <div className="flex">
@@ -171,21 +124,6 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 classes="first:ml-1"
               >
                 Resume
-              </Button>
-            )}
-
-            <Button onClick={() => window.open("mailto:kelvinj.developer@gmail.com")}>
-              Contact
-            </Button>
-
-            {mounted && theme && data.darkMode && (
-              <Button
-                onClick={() => setTheme(theme === "dark" && mounted ? "light" : "dark")}
-              >
-                <img
-                  className="h-6"
-                  src={`/images/${theme === "dark" && mounted ? "moon.svg" : "sun.svg"}`}
-                ></img>
               </Button>
             )}
           </div>
